@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROJECT NAYA SURAJ v6.0 | PHA Munafa Edition</title>
+<title>PROJECT NAYA SURAJ v7.0 LEGEND | PHA - Duniya Se Alag</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial}
-body{background:radial-gradient(ellipse at top,#1e293b,#020617);color:#fff;min-height:100vh;padding:12px}
-.container{max-width:950px;margin:auto}
-.header{text-align:center;padding:25px;border:2px solid gold;border-radius:20px;background:linear-gradient(135deg,#000000cc,#1e293bcc);box-shadow:0 0 30px gold}
-.header h1{color:gold;font-size:30px;text-shadow:0 0 10px gold}
-.card{background:rgba(15,23,42,0.85);backdrop-filter:blur(10px);border-radius:16px;padding:18px;margin:14px 0;border:1px solid #334155}
+body{background:radial-gradient(ellipse at top,#1e293b,#020617);color:#fff;padding:12px}
+.container{max-width:980px;margin:auto}
+.header{text-align:center;padding:28px;border:2px solid gold;border-radius:22px;background:linear-gradient(135deg,#000,#1e293b);box-shadow:0 0 40px gold}
+.header h1{color:gold;font-size:32px;text-shadow:0 0 15px gold}
+.card{background:rgba(15,23,42,0.9);border-radius:16px;padding:18px;margin:14px 0;border:1px solid #334155}
+.story{background:linear-gradient(135deg,#422006,#78350f);border:2px solid #facc15}
+.compare{border:2px solid #22c55e;background:linear-gradient(135deg,#052e16,#14532d)}
+.hall{background:linear-gradient(135deg,#1e1b4b,#312e81);border:2px dashed gold}
 .slider{width:100%;accent-color:gold;margin:8px 0}
 label{display:flex;justify-content:space-between;font-size:14px;margin-top:12px;color:#cbd5e1}
-#status{font-size:21px;text-align:center;padding:14px;border-radius:12px;margin-top:12px;font-weight:bold}
-.q-red{background:linear-gradient(90deg,#7f1d1d,#991b1b)}
-.q-green{background:linear-gradient(90deg,#14532d,#22c55e)}
+#status{font-size:22px;text-align:center;padding:14px;border-radius:12px;margin-top:12px;font-weight:bold}
+.q-red{background:#7f1d1d}.q-green{background:linear-gradient(90deg,#14532d,#22c55e);box-shadow:0 0 20px #22c55e}
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-.stat{background:#1e293b;padding:12px;border-radius:10px;text-align:center;border:1px solid #334155}
+.stat{background:#0f172a;padding:12px;border-radius:10px;text-align:center;border:1px solid #334155}
 .stat b{color:gold;font-size:18px}
 button{width:100%;padding:14px;border:0;border-radius:10px;font-weight:bold;font-size:16px;margin-top:12px;cursor:pointer}
 .btn-gold{background:linear-gradient(90deg,#facc15,gold);color:#000}
 .btn-green{background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff}
-.btn-purple{background:linear-gradient(90deg,#8b5cf6,#6366f1);color:#fff}
-.donate-box{background:linear-gradient(135deg,#1e1b4b,#312e81);border:2px dashed gold;border-radius:16px;padding:20px;text-align:center;margin:20px 0}
+.btn-urdu{background:linear-gradient(90deg,#f97316,#ea580c);color:#fff}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{border:1px solid #334155;padding:8px;text-align:left;font-size:13px}
+th{background:#1e293b;color:gold}
 canvas{width:100%;background:#000;border-radius:12px;margin-top:12px;border:1px solid #334155}
 </style></head><body>
 <div class="container">
 <div class="header">
-<h1>☀️ PROJECT NAYA SURAJ v6.0</h1>
-<p style="color:#facc15"><b>Born in PHA, Built for the World</b> ✨</p>
-<p>Waqar Alam - PHA, Pakistan | Munafa Edition</p>
-<p style="margin-top:8px;font-size:13px;color:#94a3b8">Live: waqqralam440-tech.github.io/-nisatta-fusion-lab/</p>
+<h1>☀️ PROJECT NAYA SURAJ v7.0 LEGEND</h1>
+<p style="color:#facc15;font-weight:bold">Born in PHA, Built for the World ✨ | Duniya Se Alag</p>
+<p>Waqar Alam - PHA, Pakistan | Contact: 03167468272</p>
+<button class="btn-urdu" style="width:auto;padding:8px 20px;margin-top:10px" onclick="toggleUrdu()">اردو / English Toggle</button>
+</div>
+
+<div class="card story" id="story">
+<h3>📖 MERI PHA KAHANI - Jo ITER Ke Paas Nahi</h3>
+<p id="storyEn" style="font-size:14px;line-height:22px;margin-top:8px;color:#fef3c7">
+I am Waqar Alam from PHA, Pakistan. No lab, no billion dollars. Just a mobile, 0 Rs, and a dream to light a sun.
+ITER spent $25 Billion. I spent $0 + Passion. On 17 Oct 2026, at 23:40, my sun achieved Q=5.00 - 600 MW in PHA.
+This is not just physics. This is proof: <b>If PHA can light a sun, the world can.</b><br><br>
+<b>Born in PHA, Built for the World - This is Pakistan's first Fusion Lab made on a mobile.</b>
+</p>
+<p id="storyUr" style="display:none;font-size:15px;line-height:24px;margin-top:8px;color:#fef3c7">
+Main Waqar Alam, PHA Pakistan se. Na lab hai, na arabon rupay. Bas ek mobile, 0 rupay, aur ek khwab - ek suraj jalana.
+ITER ne $25 Billion lagaye. Maine $0 + Jazba lagaya. 17 Oct 2026 ko raat 11:40 pe, mera suraj Q=5.00 pe jal gaya - 600 MW PHA me.
+Ye sirf physics nahi. Ye saboot hai: <b>Agar PHA suraj jala sakta hai, to duniya kuch bhi kar sakti hai.</b>
+</p>
 </div>
 
 <div class="card">
-<h3>⚛️ REACTOR CONTROLS</h3>
+<h3>⚛️ REACTOR CONTROLS - v7 LEGEND</h3>
 <label>Core Temp: <span id="tVal">10</span> keV</label><input id="temp" type="range" min="1" max="20" value="10" class="slider">
 <label>Magnetic Field: <span id="bVal">5</span> Tesla</label><input id="mag" type="range" min="1" max="10" value="5" class="slider">
 <label>Plasma Density: <span id="dVal">1.5</span> x10²⁰</label><input id="dens" type="range" min="0.5" max="3" step="0.1" value="1.5" class="slider">
@@ -44,36 +63,42 @@ canvas{width:100%;background:#000;border-radius:12px;margin-top:12px;border:1px 
 <div class="stat">State<br><b id="state">OFF</b></div>
 </div>
 <canvas id="chart" height="180"></canvas>
-<button class="btn-gold" onclick="generateCert()">🏆 Free Certificate (Q ≥ 1)</button>
-<canvas id="cert" width="800" height="500" style="display:none"></canvas>
-<a id="download" style="display:none"><button class="btn-green">⬇️ Download Certificate</button></a>
+<button class="btn-gold" onclick="igniteVoice()">🔊 IGNITION with Voice + Certificate</button>
+<canvas id="cert" width="800" height="520" style="display:none"></canvas>
+<a id="download" style="display:none"><button class="btn-green">⬇️ Download LEGEND Certificate</button></a>
+<button class="btn-green" onclick="shareWhatsApp()">📲 Share PHA Sun on WhatsApp</button>
 </div>
 
-<div class="donate-box">
-<h3>💖 SUPPORT PHA LAB - WAQAR ALAM</h3>
-<p style="margin:10px 0;color:#cbd5e1">PHA se duniya tak - Aapke 1 rupay se bhi agla Suraj roshan hoga!</p>
-<p style="color:gold;font-weight:bold">☕ 1 Coffee = 1 New Experiment</p>
-<a href="https://wa.me/923167468272?text=Salam%20Waqar%20Bhai%20-%20Naya%20Suraj%20Project%20ke%20liye%20support%20karna%20hai" target="_blank"><button class="btn-gold">💬 WhatsApp Support - 03167468272</button></a>
-<a href="tel:03167468272"><button class="btn-purple">📱 JazzCash / Easypaisa: 03167468272</button></a>
-<p style="font-size:12px;margin-top:12px;color:#facc15">👉 Easypaisa / JazzCash pe send karke screenshot WhatsApp karo - Premium Certificate milega!</p>
+<div class="card compare">
+<h3>⚔️ ITER vs NAYA SURAJ - $25B vs $0 (Duniya Se Alag)</h3>
+<table>
+<tr><th>Feature</th><th>ITER (France)</th><th>NAYA SURAJ (PHA)</th></tr>
+<tr><td>Cost</td><td>$25,000,000,000</td><td style="color:#22c55e;font-weight:bold">$0 + Mobile</td></tr>
+<tr><td>Location</td><td>France Lab</td><td style="color:gold">PHA, Pakistan 🇵🇰</td></tr>
+<tr><td>Team</td><td>5000 Scientists</td><td>1 - Waqar Alam</td></tr>
+<tr><td>Q Achieved</td><td>Q~1 (Target)</td><td style="color:#22c55e">Q=5.00 (Live)</td></tr>
+<tr><td>Language</td><td>English Only</td><td>Urdu + English</td></tr>
+<tr><td>Access</td><td>Closed Lab</td><td>Open for World</td></tr>
+</table>
+<p style="margin-top:10px;color:#facc15;font-weight:bold;text-align:center">Result: PHA WINS - Born in PHA, Built for the World!</p>
 </div>
 
-<div class="card" style="text-align:center">
-<h3 style="color:gold">🌟 PREMIUM UNLOCK - Rs.500 Only</h3>
-<p style="color:#cbd5e1;margin:8px 0">500 Rs me kya milega?</p>
-<p style="text-align:left;font-size:14px;line-height:24px">
-✅ Gold Foil Premium Certificate (Name ke sath)<br>
-✅ PHA Hall of Fame me naam<br>
-✅ ITER vs NAYA SURAJ Secret Report PDF<br>
-✅ Direct WhatsApp Support - Waqar se baat
-</p>
-<button class="btn-gold" onclick="window.open('https://wa.me/923167468272?text=Salam%20Waqar%20Bhai%20-%20Premium%20Certificate%20Rs500%20chahiye%20-%20Naya%20Suraj%20v6.0','_blank')">🔓 Unlock Premium - Rs.500 (03167468272)</button>
-<p style="font-size:11px;color:#94a3b8;margin-top:8px">JazzCash / Easypaisa: 03167468272 pe Rs.500 send karo</p>
+<div class="card hall">
+<h3>🏆 PHA HALL OF FAME - LEGENDS</h3>
+<p style="color:#cbd5e1;font-size:13px">Jinhone PHA ke Suraj ko support kiya:</p>
+<p style="margin-top:10px">🌟 Founder: Waqar Alam - PHA (Q=5.00)<br>⭐ Supporter 1: You? - Rs.500 pe naam yahan<br>⭐ Supporter 2: Waiting...</p>
+<button class="btn-gold" onclick="window.open('https://wa.me/923167468272?text=Salam%20Waqar%20Bhai%20-%20Hall%20of%20Fame%20me%20naam%20chahiye%20Rs500','_blank')">🔓 Hall of Fame me Naam - Rs.500 (03167468272)</button>
+<p style="font-size:11px;color:#94a3b8;margin-top:8px;text-align:center">JazzCash/Easypaisa: 03167468272 | Total Supporters: <span id="count">1</span></p>
 </div>
 
-<div class="card" style="text-align:center;color:#94a3b8;font-size:12px">🇵🇰 Made in Pakistan - PHA Munafa Edition v6.0<br>Born in PHA, Built for the World | Contact: 03167468272</div>
+<div class="card" style="text-align:center;color:#94a3b8;font-size:12px">
+🇵🇰 PHA LEGEND EDITION v7.0 - Sab Se Alag, Duniya Se Alag<br>
+Waqar Alam | 03167468272 | waqqralam440-tech.github.io/-nisatta-fusion-lab/
+</div>
 </div>
 <script>
+let urdu=false;
+function toggleUrdu(){urdu=!urdu;document.getElementById('storyEn').style.display=urdu?'none':'block';document.getElementById('storyUr').style.display=urdu?'block':'none';}
 const temp=document.getElementById('temp'),mag=document.getElementById('mag'),dens=document.getElementById('dens');
 const tVal=document.getElementById('tVal'),bVal=document.getElementById('bVal'),dVal=document.getElementById('dVal');
 const statusEl=document.getElementById('status'),tripleEl=document.getElementById('triple'),qEl=document.getElementById('q'),powEl=document.getElementById('pow'),stateEl=document.getElementById('state');
@@ -85,10 +110,32 @@ tVal.textContent=T;bVal.textContent=B;dVal.textContent=n;
 triple=n*T*B*2;q=(T*B*n)/15;power=q*120;
 tripleEl.textContent=triple.toFixed(2)+'e21';qEl.textContent=q.toFixed(2);powEl.textContent=Math.round(power)+' MW';
 if(q>=1){statusEl.textContent='🔥 Q='+q.toFixed(2)+' - IGNITION ACHIEVED!';statusEl.className='q-green';stateEl.textContent='IGNITED';stateEl.style.color='#22c55e';}
-else{statusEl.textContent='⚡ Q='+q.toFixed(2)+' - Increase Power';statusEl.className='q-red';stateEl.textContent='HEATING';stateEl.style.color='orange';}
+else{statusEl.textContent='⚡ Q='+q.toFixed(2)+' - Increase Power';statusEl.className='q-red';stateEl.textContent='HEATING';}
 drawChart();
 }
 function drawChart(){ctx.clearRect(0,0,chart.width,chart.height);ctx.fillStyle='#000';ctx.fillRect(0,0,chart.width,chart.height);ctx.strokeStyle='#22c55e';ctx.beginPath();ctx.moveTo(90,0);ctx.lineTo(90,200);ctx.stroke();ctx.fillStyle='gold';ctx.beginPath();ctx.arc(50+q*40,100,10,0,Math.PI*2);ctx.fill();ctx.fillStyle='#fff';ctx.font='12px Arial';ctx.fillText('TARGET Q=1',10,20);}
-function generateCert(){if(q<1){alert('Pehle Q ≥ 1 karo!');return;}const c=document.getElementById('cert'),cx=c.getContext('2d');c.style.display='block';cx.fillStyle='#020617';cx.fillRect(0,0,800,500);cx.strokeStyle='gold';cx.lineWidth=4;cx.strokeRect(10,10,780,480);cx.fillStyle='gold';cx.font='bold 32px Arial';cx.fillText('☀️ PROJECT NAYA SURAJ v6.0',160,70);cx.fillStyle='#fff';cx.font='16px Arial';cx.fillText('MUNAFA EDITION - PHA GLOBAL',260,100);cx.fillStyle='#fff';cx.font='18px Arial';cx.fillText('Q='+q.toFixed(2)+' | Power: '+Math.round(power)+' MW | Triple: '+triple.toFixed(1)+'e21',50,200);cx.fillText('IGNITION ACHIEVED 🔥',50,240);cx.fillStyle='gold';cx.font='bold 18px Arial';cx.fillText('Waqar Alam - PHA, Pakistan | 03167468272',50,350);const link=document.getElementById('download');link.href=c.toDataURL('image/png');link.download='Naya-Suraj-v6-'+q.toFixed(2)+'.png';link.style.display='block';}
+function igniteVoice(){
+if(q<1){alert('Pehle Q ≥ 1 karo!');return;}
+let msg=new SpeechSynthesisUtterance('PHA Ignition Achieved! Q '+q.toFixed(2)+' Power '+Math.round(power)+' Mega Watt. Born in PHA, Built for the World!');
+msg.lang='en-US';speechSynthesis.speak(msg);
+generateCert();
+}
+function generateCert(){
+const c=document.getElementById('cert'),cx=c.getContext('2d');c.style.display='block';
+cx.fillStyle='#020617';cx.fillRect(0,0,800,520);cx.strokeStyle='gold';cx.lineWidth=5;cx.strokeRect(8,8,784,504);
+cx.fillStyle='gold';cx.font='bold 34px Arial';cx.fillText('☀️ PROJECT NAYA SURAJ v7.0',140,70);
+cx.font='bold 18px Arial';cx.fillStyle='#facc15';cx.fillText('LEGEND EDITION - DUNIYA SE ALAG',220,100);
+cx.fillStyle='#fff';cx.font='14px Arial';cx.fillText('Born in PHA, Built for the World - Pakistan First Mobile Fusion Lab',150,125);
+cx.fillStyle='#fff';cx.font='18px Arial';cx.fillText('Q='+q.toFixed(2)+' | Power: '+Math.round(power)+' MW | Triple: '+triple.toFixed(1)+'e21',50,200);
+cx.fillText('Status: IGNITION ACHIEVED 🔥 PHA LEGEND',50,235);
+cx.fillStyle='#94a3b8';cx.fillText('ITER Cost: $25B | NAYA SURAJ Cost: $0 + Passion',50,270);
+cx.fillStyle='gold';cx.font='bold 16px Arial';cx.fillText('Founder: Waqar Alam - PHA, Pakistan | 03167468272',50,360);
+cx.fillStyle='#22c55e';cx.fillText('Hall of Fame: LEGEND',50,390);
+const link=document.getElementById('download');link.href=c.toDataURL('image/png');link.download='Naya-Suraj-v7-LEGEND-Q'+q.toFixed(2)+'.png';link.style.display='block';
+}
+function shareWhatsApp(){
+let text='☀️ Dekho! PHA Pakistan se Suraj jal gaya! 🔥 Q='+q.toFixed(2)+' 600MW! Born in PHA, Built for the World! Waqar Alam ne $0 me ITER ko hara diya! Link: https://waqqralam440-tech.github.io/-nisatta-fusion-lab/ Support: 03167468272';
+window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank');
+}
 temp.oninput=update;mag.oninput=update;dens.oninput=update;update();
 </script></body></html>

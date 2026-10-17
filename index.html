@@ -1,121 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROJECT NAYA SURAJ v5.0 | PHA GLOBAL EDITION</title>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PROJECT NAYA SURAJ v6.0 | PHA Munafa Edition</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
-body{background:#020617;color:#fff;padding:10px}
-.container{max-width:900px;margin:auto}
-.header{text-align:center;padding:20px;border:2px solid gold;border-radius:15px;background:#000;margin-bottom:15px}
-.header h1{color:gold;font-size:28px}
-.header p{color:#aaa;margin-top:5px}
-.card{background:#0f172a;border-radius:12px;padding:15px;margin:10px 0;border:1px solid #334155}
-.slider{width:100%;margin:10px 0}
-label{display:flex;justify-content:space-between;font-size:14px;margin-top:10px}
-button{width:100%;padding:12px;background:gold;color:#000;border:0;border-radius:8px;font-weight:bold;font-size:16px;margin-top:10px;cursor:pointer}
-#status{font-size:20px;text-align:center;padding:10px;border-radius:8px;margin-top:10px}
-.q-red{background:#7f1d1d;color:#fff}
-.q-green{background:#14532d;color:#fff}
-canvas{width:100%;background:#000;border-radius:10px;margin-top:10px}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
-.stat{background:#1e293b;padding:10px;border-radius:8px;text-align:center}
-.stat b{color:gold}
-</style>
-</head>
-<body>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial}
+body{background:radial-gradient(ellipse at top,#1e293b,#020617);color:#fff;min-height:100vh;padding:12px}
+.container{max-width:950px;margin:auto}
+.header{text-align:center;padding:25px;border:2px solid gold;border-radius:20px;background:linear-gradient(135deg,#000000cc,#1e293bcc);box-shadow:0 0 30px gold}
+.header h1{color:gold;font-size:30px;text-shadow:0 0 10px gold}
+.card{background:rgba(15,23,42,0.85);backdrop-filter:blur(10px);border-radius:16px;padding:18px;margin:14px 0;border:1px solid #334155}
+.slider{width:100%;accent-color:gold;margin:8px 0}
+label{display:flex;justify-content:space-between;font-size:14px;margin-top:12px;color:#cbd5e1}
+#status{font-size:21px;text-align:center;padding:14px;border-radius:12px;margin-top:12px;font-weight:bold}
+.q-red{background:linear-gradient(90deg,#7f1d1d,#991b1b)}
+.q-green{background:linear-gradient(90deg,#14532d,#22c55e)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.stat{background:#1e293b;padding:12px;border-radius:10px;text-align:center;border:1px solid #334155}
+.stat b{color:gold;font-size:18px}
+button{width:100%;padding:14px;border:0;border-radius:10px;font-weight:bold;font-size:16px;margin-top:12px;cursor:pointer}
+.btn-gold{background:linear-gradient(90deg,#facc15,gold);color:#000}
+.btn-green{background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff}
+.btn-purple{background:linear-gradient(90deg,#8b5cf6,#6366f1);color:#fff}
+.donate-box{background:linear-gradient(135deg,#1e1b4b,#312e81);border:2px dashed gold;border-radius:16px;padding:20px;text-align:center;margin:20px 0}
+canvas{width:100%;background:#000;border-radius:12px;margin-top:12px;border:1px solid #334155}
+</style></head><body>
 <div class="container">
 <div class="header">
-<h1>☀️ PROJECT NAYA SURAJ v5.0</h1>
-<p><b>Born in PHA, Built for the World</b><br>Waqar Alam - PHA, Pakistan</p>
-<p style="color:gold;margin-top:8px">Live: waqqralam440-tech.github.io/-nisatta-fusion-lab/</p>
+<h1>☀️ PROJECT NAYA SURAJ v6.0</h1>
+<p style="color:#facc15"><b>Born in PHA, Built for the World</b> ✨</p>
+<p>Waqar Alam - PHA, Pakistan | Munafa Edition</p>
+<p style="margin-top:8px;font-size:13px;color:#94a3b8">Live: waqqralam440-tech.github.io/-nisatta-fusion-lab/</p>
 </div>
 
 <div class="card">
-<h3>⚛️ CONTROLS</h3>
-<label>Core Temp: <span id="tVal">10</span> keV</label>
-<input id="temp" type="range" min="1" max="20" value="10" class="slider">
-
-<label>Magnetic Field: <span id="bVal">5</span> Tesla</label>
-<input id="mag" type="range" min="1" max="10" value="5" class="slider">
-
-<label>Plasma Density: <span id="dVal">1.5</span> x10²⁰</label>
-<input id="dens" type="range" min="0.5" max="3" step="0.1" value="1.5" class="slider">
-
-<div id="status" class="q-red">Q = 0.00 - Increase Power</div>
-
+<h3>⚛️ REACTOR CONTROLS</h3>
+<label>Core Temp: <span id="tVal">10</span> keV</label><input id="temp" type="range" min="1" max="20" value="10" class="slider">
+<label>Magnetic Field: <span id="bVal">5</span> Tesla</label><input id="mag" type="range" min="1" max="10" value="5" class="slider">
+<label>Plasma Density: <span id="dVal">1.5</span> x10²⁰</label><input id="dens" type="range" min="0.5" max="3" step="0.1" value="1.5" class="slider">
+<div id="status" class="q-red">Q = 0.00</div>
 <div class="stats">
 <div class="stat">Triple Product<br><b id="triple">0</b></div>
 <div class="stat">Fusion Gain Q<br><b id="q">0.00</b></div>
 <div class="stat">Power<br><b id="pow">0 MW</b></div>
 <div class="stat">State<br><b id="state">OFF</b></div>
 </div>
-
-<canvas id="chart" height="200"></canvas>
-
-<button onclick="generateCert()">🏆 Generate Certificate (Q ≥ 1)</button>
+<canvas id="chart" height="180"></canvas>
+<button class="btn-gold" onclick="generateCert()">🏆 Free Certificate (Q ≥ 1)</button>
 <canvas id="cert" width="800" height="500" style="display:none"></canvas>
-<a id="download" style="display:none"><button style="background:#22c55e">⬇️ Download Certificate</button></a>
+<a id="download" style="display:none"><button class="btn-green">⬇️ Download Certificate</button></a>
 </div>
 
-<div class="card" style="text-align:center;color:#94a3b8;font-size:13px">
-🇵🇰 Made in Pakistan - PHA Global Edition v5.0 | Real Lawson Criterion Physics<br>
-ITER Cost: $25B | NAYA SURAJ Cost: $0 + Passion
-</div>
+<div class="donate-box">
+<h3>💖 SUPPORT PHA LAB - WAQAR ALAM</h3>
+<p style="margin:10px 0;color:#cbd5e1">PHA se duniya tak - Aapke 1 rupay se bhi agla Suraj roshan hoga!</p>
+<p style="color:gold;font-weight:bold">☕ 1 Coffee = 1 New Experiment</p>
+<a href="https://wa.me/923167468272?text=Salam%20Waqar%20Bhai%20-%20Naya%20Suraj%20Project%20ke%20liye%20support%20karna%20hai" target="_blank"><button class="btn-gold">💬 WhatsApp Support - 03167468272</button></a>
+<a href="tel:03167468272"><button class="btn-purple">📱 JazzCash / Easypaisa: 03167468272</button></a>
+<p style="font-size:12px;margin-top:12px;color:#facc15">👉 Easypaisa / JazzCash pe send karke screenshot WhatsApp karo - Premium Certificate milega!</p>
 </div>
 
+<div class="card" style="text-align:center">
+<h3 style="color:gold">🌟 PREMIUM UNLOCK - Rs.500 Only</h3>
+<p style="color:#cbd5e1;margin:8px 0">500 Rs me kya milega?</p>
+<p style="text-align:left;font-size:14px;line-height:24px">
+✅ Gold Foil Premium Certificate (Name ke sath)<br>
+✅ PHA Hall of Fame me naam<br>
+✅ ITER vs NAYA SURAJ Secret Report PDF<br>
+✅ Direct WhatsApp Support - Waqar se baat
+</p>
+<button class="btn-gold" onclick="window.open('https://wa.me/923167468272?text=Salam%20Waqar%20Bhai%20-%20Premium%20Certificate%20Rs500%20chahiye%20-%20Naya%20Suraj%20v6.0','_blank')">🔓 Unlock Premium - Rs.500 (03167468272)</button>
+<p style="font-size:11px;color:#94a3b8;margin-top:8px">JazzCash / Easypaisa: 03167468272 pe Rs.500 send karo</p>
+</div>
+
+<div class="card" style="text-align:center;color:#94a3b8;font-size:12px">🇵🇰 Made in Pakistan - PHA Munafa Edition v6.0<br>Born in PHA, Built for the World | Contact: 03167468272</div>
+</div>
 <script>
-const temp=document.getElementById('temp'), mag=document.getElementById('mag'), dens=document.getElementById('dens');
-const tVal=document.getElementById('tVal'), bVal=document.getElementById('bVal'), dVal=document.getElementById('dVal');
-const statusEl=document.getElementById('status'), tripleEl=document.getElementById('triple'), qEl=document.getElementById('q'), powEl=document.getElementById('pow'), stateEl=document.getElementById('state');
-const chart=document.getElementById('chart'), ctx=chart.getContext('2d');
+const temp=document.getElementById('temp'),mag=document.getElementById('mag'),dens=document.getElementById('dens');
+const tVal=document.getElementById('tVal'),bVal=document.getElementById('bVal'),dVal=document.getElementById('dVal');
+const statusEl=document.getElementById('status'),tripleEl=document.getElementById('triple'),qEl=document.getElementById('q'),powEl=document.getElementById('pow'),stateEl=document.getElementById('state');
+const chart=document.getElementById('chart'),ctx=chart.getContext('2d');
 let q=0,triple=0,power=0;
-
 function update(){
- let T=parseFloat(temp.value), B=parseFloat(mag.value), n=parseFloat(dens.value);
- tVal.textContent=T; bVal.textContent=B; dVal.textContent=n;
- triple = n * T * B * 2; // simplified Lawson
- q = (T * B * n)/15;
- power = q*120;
- tripleEl.textContent=triple.toFixed(2)+'e21';
- qEl.textContent=q.toFixed(2);
- powEl.textContent=Math.round(power)+' MW';
- if(q>=1){ statusEl.textContent='🔥 Q='+q.toFixed(2)+' - IGNITION ACHIEVED!'; statusEl.className='q-green'; stateEl.textContent='IGNITED'; stateEl.style.color='#22c55e'; }
- else { statusEl.textContent='⚡ Q='+q.toFixed(2)+' - Increase Power'; statusEl.className='q-red'; stateEl.textContent='HEATING'; stateEl.style.color='orange'; }
- drawChart();
+let T=parseFloat(temp.value),B=parseFloat(mag.value),n=parseFloat(dens.value);
+tVal.textContent=T;bVal.textContent=B;dVal.textContent=n;
+triple=n*T*B*2;q=(T*B*n)/15;power=q*120;
+tripleEl.textContent=triple.toFixed(2)+'e21';qEl.textContent=q.toFixed(2);powEl.textContent=Math.round(power)+' MW';
+if(q>=1){statusEl.textContent='🔥 Q='+q.toFixed(2)+' - IGNITION ACHIEVED!';statusEl.className='q-green';stateEl.textContent='IGNITED';stateEl.style.color='#22c55e';}
+else{statusEl.textContent='⚡ Q='+q.toFixed(2)+' - Increase Power';statusEl.className='q-red';stateEl.textContent='HEATING';stateEl.style.color='orange';}
+drawChart();
 }
-function drawChart(){
- ctx.clearRect(0,0,chart.width,chart.height);
- ctx.fillStyle='#000'; ctx.fillRect(0,0,chart.width,chart.height);
- ctx.strokeStyle='#334155'; ctx.strokeRect(0,0,chart.width,chart.height);
- ctx.fillStyle='gold'; ctx.beginPath(); ctx.arc(50+q*40,100,8,0,Math.PI*2); ctx.fill();
- ctx.fillStyle='#fff'; ctx.fillText('Q Graph - Target Q=1 is GREEN line',10,20);
- ctx.strokeStyle='#22c55e'; ctx.beginPath(); ctx.moveTo(90,0); ctx.lineTo(90,200); ctx.stroke();
-}
-function generateCert(){
- if(q<1){ alert('Pehle Q ≥ 1 achieve karo! Sliders badhao.'); return; }
- const c=document.getElementById('cert'), cx=c.getContext('2d');
- c.style.display='block';
- cx.fillStyle='#020617'; cx.fillRect(0,0,800,500);
- cx.strokeStyle='gold'; cx.lineWidth=4; cx.strokeRect(10,10,780,480);
- cx.fillStyle='gold'; cx.font='bold 32px Arial'; cx.fillText('☀️ PROJECT NAYA SURAJ',180,70);
- cx.font='16px Arial'; cx.fillStyle='#fff'; cx.fillText('PHA GLOBAL EDITION - CERTIFICATE OF IGNITION',200,100);
- cx.fillText('Born in PHA, Built for the World',270,125);
- cx.fillStyle='#aaa'; cx.fillRect(50,150,700,2);
- cx.fillStyle='#fff'; cx.font='18px Arial';
- cx.fillText('Awarded to: Fusion Commander',50,190);
- cx.fillText('Triple Product: '+triple.toFixed(2)+'e21 m⁻³ keV s',50,230);
- cx.fillText('Fusion Gain Q: '+q.toFixed(2),50,260);
- cx.fillText('Power Output: '+Math.round(power)+' MW',50,290);
- cx.fillText('Status: IGNITION ACHIEVED',50,320);
- cx.fillStyle='gold'; cx.font='bold 20px Arial'; cx.fillText('Creator: Waqar Alam - PHA, Pakistan',50,380);
- cx.fillStyle='#fff'; cx.font='14px Arial'; cx.fillText('Date: '+new Date().toLocaleDateString()+' | Made in Pakistan 🇵🇰',50,410);
- const link=document.getElementById('download');
- link.href=c.toDataURL('image/png'); link.download='Naya-Suraj-Certificate.png'; link.style.display='block';
-}
-temp.oninput=update; mag.oninput=update; dens.oninput=update;
-update();
-</script>
-</body>
-</html>
+function drawChart(){ctx.clearRect(0,0,chart.width,chart.height);ctx.fillStyle='#000';ctx.fillRect(0,0,chart.width,chart.height);ctx.strokeStyle='#22c55e';ctx.beginPath();ctx.moveTo(90,0);ctx.lineTo(90,200);ctx.stroke();ctx.fillStyle='gold';ctx.beginPath();ctx.arc(50+q*40,100,10,0,Math.PI*2);ctx.fill();ctx.fillStyle='#fff';ctx.font='12px Arial';ctx.fillText('TARGET Q=1',10,20);}
+function generateCert(){if(q<1){alert('Pehle Q ≥ 1 karo!');return;}const c=document.getElementById('cert'),cx=c.getContext('2d');c.style.display='block';cx.fillStyle='#020617';cx.fillRect(0,0,800,500);cx.strokeStyle='gold';cx.lineWidth=4;cx.strokeRect(10,10,780,480);cx.fillStyle='gold';cx.font='bold 32px Arial';cx.fillText('☀️ PROJECT NAYA SURAJ v6.0',160,70);cx.fillStyle='#fff';cx.font='16px Arial';cx.fillText('MUNAFA EDITION - PHA GLOBAL',260,100);cx.fillStyle='#fff';cx.font='18px Arial';cx.fillText('Q='+q.toFixed(2)+' | Power: '+Math.round(power)+' MW | Triple: '+triple.toFixed(1)+'e21',50,200);cx.fillText('IGNITION ACHIEVED 🔥',50,240);cx.fillStyle='gold';cx.font='bold 18px Arial';cx.fillText('Waqar Alam - PHA, Pakistan | 03167468272',50,350);const link=document.getElementById('download');link.href=c.toDataURL('image/png');link.download='Naya-Suraj-v6-'+q.toFixed(2)+'.png';link.style.display='block';}
+temp.oninput=update;mag.oninput=update;dens.oninput=update;update();
+</script></body></html>

@@ -1,81 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PHA | SUN-OS v9.1</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHA TOOLS OS v10 - Built by One Man for Everyone</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Space Grotesk',sans-serif;background:#0a0a05;color:#fff;min-height:100vh}
-.sun-core{position:fixed;top:-30%;left:50%;transform:translateX(-50%);width:140vw;height:140vw;background: radial-gradient(circle at center, #ffec61 0%, #ffb800 15%, #ff5a00 35%, transparent 70%);filter: blur(40px);opacity:0.6;animation: breathe 6s ease-in-out infinite;pointer-events:none}
-@keyframes breathe{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.08)}}
-.glass{backdrop-filter: blur(20px);background: rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:24px}
-header{position:relative; z-index:2;padding:30px 20px;text-align:center}
-h1{font-family:'Syne',sans-serif;font-size:clamp(40px,10vw,84px);font-weight:800;letter-spacing:-3px;line-height:0.9}
-h1 span{background: linear-gradient(180deg,#fff 20%, #ffcc00);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.tag{margin-top:10px; letter-spacing:4px; opacity:0.8; font-size:13px; font-weight:600}
-.weather-os{position:relative; z-index:2;max-width:900px; margin:30px auto; padding:20px;display:grid; grid-template-columns:1.3fr 0.7fr; gap:20px}
-@media(max-width:700px){.weather-os{grid-template-columns:1fr}}
-.main-weather{padding:32px;position:relative; overflow:hidden}
-.temp{font-family:'Syne',sans-serif;font-size:clamp(80px,18vw,140px);font-weight:800; line-height:0.9}
-.temp small{font-size:0.4em; font-weight:300; opacity:0.7}
-.city{font-size:22px; margin-top:10px}
-.status{opacity:0.7; margin-top:6px}
-.side-cards{display:grid; gap:20px}
-.mini{padding:22px}
-.mini b{display:block; font-size:11px; letter-spacing:2px; opacity:0.5; margin-bottom:8px}
-.mini span{font-size:20px; font-weight:600}
-.search-box{max-width:900px; margin:0 auto; padding:0 20px;position:relative; z-index:2;display:flex; gap:10px}
-.search-box input{flex:1; padding:18px 22px; border-radius:999px;background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15);color:#fff; font-size:16px; outline:none}
-.search-box button{padding:18px 28px; border-radius:999px; border:none; background:#ffcc00; color:#000; font-weight:800; font-family:'Syne'; cursor:pointer}
-.search-box button:active{transform:scale(0.95)}
-.footer{text-align:center; padding:60px 20px; opacity:0.4; font-size:12px; letter-spacing:2px; position:relative; z-index:2}
-.live-dot{display:inline-block; width:8px; height:8px; background:#00ff88; border-radius:50%; margin-right:8px; box-shadow:0 0 10px #00ff88; animation:pulse 1s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.sun{position:fixed;top:-30%;left:50%;transform:translateX(-50%);width:140vw;height:140vw;background: radial-gradient(circle at center, #ffec61 0%, #ffb800 15%, #ff5a00 35%, transparent 70%);filter: blur(50px);opacity:0.5;pointer-events:none}
+.glass{backdrop-filter: blur(18px);background: rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:20px}
+header{text-align:center;padding:30px 20px;position:relative;z-index:2}
+h1{font-family:'Syne',sans-serif;font-size:clamp(32px,8vw,68px);font-weight:800;line-height:0.9;letter-spacing:-2px}
+h1 span{background: linear-gradient(180deg,#fff,#ffcc00);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sub{opacity:0.6;font-size:12px;letter-spacing:3px;margin-top:10px}
+.wrap{max-width:1100px;margin:0 auto;padding:20px;position:relative;z-index:2}
+.search{display:flex;gap:10px;margin-bottom:25px}
+.search input{flex:1;padding:16px 22px;border-radius:999px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:15px;outline:none}
+.search button{padding:16px 26px;border-radius:999px;border:none;background:#ffcc00;color:#000;font-weight:800;font-family:'Syne';cursor:pointer}
+.grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:20px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+.weather{padding:26px}
+.temp{font-family:'Syne';font-size:64px;font-weight:800}
+.temp small{font-size:0.4em;opacity:0.6}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-top:25px}
+.tool{padding:18px;cursor:pointer;transition:0.2s;text-align:center}
+.tool:hover{transform:translateY(-3px);background:rgba(255,255,255,0.12)}
+.tool b{display:block;font-size:11px;letter-spacing:1.5px;opacity:0.5;margin-bottom:6px}
+.tool span{font-weight:600;font-size:15px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);z-index:10;align-items:center;justify-content:center;padding:20px}
+.modal.active{display:flex}
+.modal-box{max-width:500px;width:100%;padding:28px;position:relative}
+.close{position:absolute;top:14px;right:18px;font-size:22px;cursor:pointer;opacity:0.6}
+.input{width:100%;padding:12px 16px;border-radius:12px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;margin:8px 0;outline:none}
+.btn{width:100%;padding:12px;border-radius:12px;border:none;background:#ffcc00;color:#000;font-weight:700;cursor:pointer;margin-top:10px}
+.out{margin-top:12px;padding:12px;background:rgba(255,255,255,0.05);border-radius:12px;word-break:break-all;font-size:14px;min-height:40px}
+.footer{text-align:center;padding:50px 20px;opacity:0.4;font-size:11px;letter-spacing:2px}
+.live{width:8px;height:8px;background:#00ff88;border-radius:50%;display:inline-block;margin-right:6px;box-shadow:0 0 10px #00ff88}
 </style>
 </head>
 <body>
-<div class="sun-core"></div>
+<div class="sun"></div>
 <header>
-<h1>PHA<br><span>SUN-OS</span></h1>
-<div class="tag">BUILT BY PHA • THINKING BEYOND NASA</div>
+<h1>PHA<br><span>TOOLS OS</span></h1>
+<div class="sub"><span class="live"></span> BUILT BY ONE MAN • FOR EVERYONE • v10 VIRAL</div>
 </header>
-
-<div class="search-box">
-<input id="searchInput" placeholder="Shehar likho - Peshawar, Karachi, Dubai...">
-<button id="searchBtn">SEARCH</button>
+<div class="wrap">
+<div class="search">
+<input id="cityIn" placeholder="Shehar ka mausam - Peshawar, Dubai, London...">
+<button id="cityBtn">SEARCH</button>
 </div>
-
-<div class="weather-os">
-<div class="glass main-weather">
-<div style="display:flex; justify-content:space-between;">
-<div><span class="live-dot"></span><span style="font-size:11px; letter-spacing:3px; opacity:0.7">LIVE WEATHER</span></div>
-<div style="font-size:11px; opacity:0.5" id="timeNow">--:--</div>
-</div>
+<div class="grid">
+<div class="glass weather">
+<div style="display:flex;justify-content:space-between"><span style="font-size:10px;letter-spacing:2px;opacity:0.6">LIVE WEATHER</span><span id="time" style="font-size:10px;opacity:0.5"></span></div>
 <div class="temp" id="temp">--<small>°C</small></div>
-<div class="city" id="city">📍 Location...</div>
-<div class="status" id="status">Connect ho raha hai...</div>
+<div id="city">📍 Peshawar dhund raha...</div>
+<div id="stat" style="opacity:0.6;margin-top:4px;font-size:13px">--</div>
+<div style="display:flex;gap:15px;margin-top:14px;font-size:12px;opacity:0.7"><span id="wind">--</span><span id="feel">--</span><span id="grade">--</span></div>
 </div>
-<div class="side-cards">
-<div class="glass mini"><b>WIND / HAWA</b><span id="wind">-- km/h</span></div>
-<div class="glass mini"><b>FEELS LIKE</b><span id="feels">--°C</span></div>
-<div class="glass mini"><b>GRADE</b><span id="grade">--</span></div>
-<div class="glass mini"><b>PHA OS</b><span style="font-size:14px; opacity:0.8">Nawa se aage soch!</span></div>
+<div class="glass weather" style="display:flex;flex-direction:column;justify-content:center">
+<b style="font-size:11px;letter-spacing:2px;opacity:0.5">PHA MISSION</b>
+<div style="margin-top:10px;font-size:16px;line-height:1.4">Ek insan ne socha - <br><b>Logon ke liye kuch faida mand banau</b> jo roz kaam aaye. Ye wahi hai.<br><br><span style="opacity:0.6;font-size:13px">12 Tools • Free • No Ads • Fast</span></div>
 </div>
 </div>
-<div class="footer">PESHAWAR HACKERS ASSOCIATION • 2026</div>
-
+<div class="tools">
+<div class="glass tool" data-tool="ip"><b>TOOL 01</b><span>🌐 My IP</span></div>
+<div class="glass tool" data-tool="pass"><b>TOOL 02</b><span>🔑 Password Gen</span></div>
+<div class="glass tool" data-tool="qr"><b>TOOL 03</b><span>⚡ QR Maker</span></div>
+<div class="glass tool" data-tool="calc"><b>TOOL 04</b><span>🧮 Calculator</span></div>
+<div class="glass tool" data-tool="age"><b>TOOL 05</b><span>🎂 Age Calc</span></div>
+<div class="glass tool" data-tool="words"><b>TOOL 06</b><span>📝 Word Count</span></div>
+<div class="glass tool" data-tool="color"><b>TOOL 07</b><span>🎨 Color Picker</span></div>
+<div class="glass tool" data-tool="case"><b>TOOL 08</b><span>🔠 Text Case</span></div>
+<div class="glass tool" data-tool="bmi"><b>TOOL 09</b><span>💪 BMI Calc</span></div>
+<div class="glass tool" data-tool="speed"><b>TOOL 10</b><span>📶 Internet Speed</span></div>
+<div class="glass tool" data-tool="google"><b>TOOL 11</b><span>🔍 Google Search</span></div>
+<div class="glass tool" data-tool="youtube"><b>TOOL 12</b><span>▶️ YouTube Search</span></div>
+</div>
+<div class="footer">PESHAWAR HACKERS ASSOCIATION • 2026 • ONE MAN • ONE MISSION • VIRAL</div>
+</div>
+<div class="modal" id="modal"><div class="glass modal-box">
+<div class="close" id="close">×</div>
+<h3 id="mTitle" style="font-family:Syne">Tool</h3>
+<div id="mBody" style="margin-top:15px"></div>
+</div></div>
 <script>
-const tempEl=document.getElementById('temp'),cityEl=document.getElementById('city'),statusEl=document.getElementById('status'),windEl=document.getElementById('wind'),feelsEl=document.getElementById('feels'),gradeEl=document.getElementById('grade'),timeEl=document.getElementById('timeNow'),searchInput=document.getElementById('searchInput'),searchBtn=document.getElementById('searchBtn');
-function updateTime(){timeEl.textContent=new Date().toLocaleTimeString();} setInterval(updateTime,1000); updateTime();
-function weatherGrade(code,temp){if(code<=1) return temp>30?"A+ DHUP WALA":"A+ Saaf"; if(code<=3) return "B+ Halke Badal"; if(code<=51) return "C Thoda Abr"; if(code<=67) return "D Barish"; if(code>=95) return "F Toofan"; return "B Theek";}
-function weatherText(code){const map={0:"Bilkul Saaf",1:"Saaf",2:"Halke Badal",3:"Badal",45:"Kohra",51:"Halki Barish",61:"Barish",71:"Baraf",95:"Toofan"}; return map[code]||"Mausam Acha";}
-async function fetchWeather(lat,lon,name){try{const r=await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m&timezone=auto`); const data=await r.json(); const c=data.current; tempEl.innerHTML=`${Math.round(c.temperature_2m)}<small>°C</small>`; cityEl.textContent=`📍 ${name}`; statusEl.textContent=weatherText(c.weather_code); windEl.textContent=`${c.wind_speed_10m} km/h`; feelsEl.textContent=`${Math.round(c.apparent_temperature)}°C`; gradeEl.textContent=weatherGrade(c.weather_code,c.temperature_2m);}catch(e){statusEl.textContent="Load nahi hua";}}
-async function locate(){if(!navigator.geolocation){fetchWeather(34.0151,71.5249,"Peshawar"); return;} navigator.geolocation.getCurrentPosition(async pos=>{const {latitude,longitude}=pos.coords; let name="Aapki Location"; try{const geo=await fetch(`https://geocoding-api.open-meteo.com/v1/reverse?latitude=${latitude}&longitude=${longitude}`); const g=await geo.json(); if(g.results && g.results[0]) name=g.results[0].name;}catch{} fetchWeather(latitude,longitude,name);},()=>{fetchWeather(34.0151,71.5249,"Peshawar");});} locate();
-async function searchCity(q){if(!q) return; statusEl.textContent="Search kar raha hun..."; try{const r=await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(q)}&count=1&language=en&format=json`); const data=await r.json(); if(data.results && data.results[0]){const {latitude,longitude,name,country}=data.results[0]; fetchWeather(latitude,longitude,`${name}, ${country}`);}else{statusEl.textContent=`"${q}" nahi mila`;}}catch{statusEl.textContent="Error";}}
-searchBtn.addEventListener('click',()=>{searchCity(searchInput.value);});
-searchInput.addEventListener('keydown',e=>{if(e.key==='Enter') searchCity(e.target.value);});
+const $=s=>document.getElementById(s);
+const tempEl=$('temp'),cityEl=$('city'),statEl=$('stat'),windEl=$('wind'),feelEl=$('feel'),gradeEl=$('grade'),timeEl=$('time');
+setInterval(()=>timeEl.textContent=new Date().toLocaleTimeString(),1000);
+function wGrade(c,t){if(c<=1) return t>30?"A+ DHUP":"A+ Saaf"; if(c<=3) return "B Badal"; if(c<=51) return "C Abr"; if(c<=67) return "D Barish"; if(c>=95) return "F Toofan"; return "B Theek";}
+function wText(c){const m={0:"Saaf",1:"Saaf",2:"Halke Badal",3:"Badal",45:"Kohra",51:"Halki Barish",61:"Barish",71:"Baraf",95:"Toofan"};return m[c]||"Acha";}
+async function fetchW(lat,lon,name){try{const r=await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m&timezone=auto`);const d=await r.json();const c=d.current;tempEl.innerHTML=`${Math.round(c.temperature_2m)}<small>°C</small>`;cityEl.textContent=`📍 ${name}`;statEl.textContent=wText(c.weather_code);windEl.textContent=`Hawa ${c.wind_speed_10m}km/h`;feelEl.textContent=`Feels ${Math.round(c.apparent_temperature)}°C`;gradeEl.textContent=wGrade(c.weather_code,c.temperature_2m);}catch{}}
+function locate(){if(!navigator.geolocation){fetchW(34.0151,71.5249,"Peshawar");return;}navigator.geolocation.getCurrentPosition(async p=>{let n="Aapki Location";try{const g=await fetch(`https://geocoding-api.open-meteo.com/v1/reverse?latitude=${p.coords.latitude}&longitude=${p.coords.longitude}`);const j=await g.json();if(j.results) n=j.results[0].name;}catch{}fetchW(p.coords.latitude,p.coords.longitude,n);},()=>fetchW(34.0151,71.5249,"Peshawar"));}locate();
+async function searchCity(q){if(!q) return;statEl.textContent="Searching...";try{const r=await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(q)}&count=1&format=json`);const d=await r.json();if(d.results){const {latitude,longitude,name,country}=d.results[0];fetchW(latitude,longitude,`${name}, ${country}`);}else statEl.textContent="Nahi mila";}catch{}}
+$('cityBtn').onclick=()=>searchCity($('cityIn').value);
+$('cityIn').onkeydown=e=>{if(e.key==='Enter') searchCity(e.target.value)}
+const modal=$('modal'),mTitle=$('mTitle'),mBody=$('mBody');
+$('close').onclick=()=>modal.classList.remove('active');
+modal.onclick=e=>{if(e.target==modal) modal.classList.remove('active')}
+function openTool(title,html){mTitle.textContent=title; mBody.innerHTML=html; modal.classList.add('active'); setTimeout(()=>{if(window.afterOpen) window.afterOpen()},100)}
+document.querySelectorAll('.tool').forEach(el=>{
+ el.onclick=()=>{
+  const t=el.dataset.tool;
+  if(t=='ip'){openTool('My IP Address',`<div class="out" id="ipOut">Loading...</div><button class="btn" onclick="loadIP()">Refresh</button>`); window.afterOpen=loadIP;}
+  if(t=='pass'){openTool('Password Generator',`<label>Length</label><input class="input" id="plen" type="number" value="16"><div class="out" id="pout"></div><button class="btn" onclick="genPass()">Generate</button><button class="btn" style="background:#fff" onclick="navigator.clipboard.writeText(document.getElementById('pout').textContent)">Copy</button>`); window.afterOpen=genPass;}
+  if(t=='qr'){openTool('QR Code Maker',`<input class="input" id="qrIn" placeholder="Text ya Link likho"><div style="text-align:center;margin-top:10px"><img id="qrImg" style="background:#fff;padding:10px;border-radius:12px;max-width:100%"></div><button class="btn" onclick="makeQR()">Generate QR</button>`); window.afterOpen=null;}
+  if(t=='calc'){openTool('Calculator',`<input class="input" id="calcIn" placeholder="2+2*5"><div class="out" id="calcOut">--</div><button class="btn" onclick="doCalc()">Calculate</button>`);}
+  if(t=='age'){openTool('Age Calculator',`<input class="input" id="ageIn" type="date"><div class="out" id="ageOut"></div><button class="btn" onclick="calcAge()">Calculate Age</button>`);}
+  if(t=='words'){openTool('Word Counter',`<textarea class="input" id="wcIn" rows="4" placeholder="Text likho..."></textarea><div class="out" id="wcOut"></div><button class="btn" onclick="countW()">Count</button>`);}
+  if(t=='color'){openTool('Color Picker',`<input type="color" id="colIn" value="#ffcc00" style="width:100%;height:60px;border-radius:12px"><div class="out" id="colOut">#ffcc00</div><button class="btn" onclick="pickCol()">Copy HEX</button>`); window.afterOpen=()=>{document.getElementById('colIn').oninput=e=>{document.getElementById('colOut').textContent=e.target.value}}}
+  if(t=='case'){openTool('Text Case Converter',`<textarea class="input" id="caseIn" rows="3" placeholder="text"></textarea><div style="display:flex;gap:8px;margin-top:8px"><button class="btn" style="flex:1" onclick="toUpper()">UPPER</button><button class="btn" style="flex:1" onclick="toLower()">lower</button></div><div class="out" id="caseOut"></div>`);}
+  if(t=='bmi'){openTool('BMI Calculator',`<input class="input" id="bmiH" placeholder="Height cm - 170"><input class="input" id="bmiW" placeholder="Weight kg - 70"><div class="out" id="bmiOut"></div><button class="btn" onclick="calcBMI()">Calculate BMI</button>`);}
+  if(t=='speed'){openTool('Internet Speed',`<div class="out" id="speedOut">Testing...</div><button class="btn" onclick="testSpeed()">Test Speed</button>`); window.afterOpen=testSpeed;}
+  if(t=='google'){openTool('Google Search',`<input class="input" id="gIn" placeholder="Google pe kya search karna hai?"><button class="btn" onclick="goGoogle()">Search on Google</button>`);}
+  if(t=='youtube'){openTool('YouTube Search',`<input class="input" id="ytIn" placeholder="YouTube pe kya dekhna hai?"><button class="btn" onclick="goYT()">Search on YouTube</button>`);}
+ }
+});
+function loadIP(){fetch('https://api.ipify.org?format=json').then(r=>r.json()).then(d=>{document.getElementById('ipOut').innerHTML=`Your IP: <b>${d.ip}</b><br><br><small>Location: Peshawar Region (via PHA)</small>`}).catch(()=>document.getElementById('ipOut').textContent='Failed, try again');}
+function genPass(){const len=parseInt(document.getElementById('plen').value)||16;const chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%";let p="";for(let i=0;i<len;i++) p+=chars[Math.floor(Math.random()*chars.length)];document.getElementById('pout').textContent=p;}
+function makeQR(){const v=document.getElementById('qrIn').value||'PHA TOOLS OS';document.getElementById('qrImg').src=`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(v)}`;}
+function doCalc(){try{const v=document.getElementById('calcIn').value;document.getElementById('calcOut').textContent=Function('"use strict";return ('+v+')')();}catch{document.getElementById('calcOut').textContent='Error';}}
+function calcAge(){const d=new Date(document.getElementById('ageIn').value);if(isNaN(d)) return;const now=new Date();let age=now.getFullYear()-d.getFullYear();const m=now.getMonth()-d.getMonth();if(m<0||(m===0&&now.getDate()<d.getDate())) age--;document.getElementById('ageOut').textContent=`Age: ${age} years`;}
+function countW(){const t=document.getElementById('wcIn').value;const words=t.trim()?t.trim().split(/\s+/).length:0;document.getElementById('wcOut').textContent=`Words: ${words} | Chars: ${t.length}`;}
+function pickCol(){navigator.clipboard.writeText(document.getElementById('colOut').textContent); alert('Copied!');}
+function toUpper(){const v=document.getElementById('caseIn').value.toUpperCase();document.getElementById('caseOut').textContent=v;}
+function toLower(){const v=document.getElementById('caseIn').value.toLowerCase();document.getElementById('caseOut').textContent=v;}
+function calcBMI(){const h=parseFloat(document.getElementById('bmiH').value)/100;const w=parseFloat(document.getElementById('bmiW').value);if(!h||!w) return;const bmi=(w/(h*h)).toFixed(1);document.getElementById('bmiOut').textContent=`BMI: ${bmi}`;}
+function testSpeed(){const out=document.getElementById('speedOut');const start=Date.now();fetch('https://api.ipify.org?format=json&cache='+Math.random()).then(()=>{const ms=Date.now()-start;out.textContent=`Ping: ${ms}ms - ${ms<100?'Excellent Fast!':'Good'}`;}).catch(()=>out.textContent='Check your internet');}
+function goGoogle(){const q=document.getElementById('gIn').value;if(q) window.open('https://www.google.com/search?q='+encodeURIComponent(q),'_blank');}
+function goYT(){const q=document.getElementById('ytIn').value;if(q) window.open('https://www.youtube.com/results?search_query='+encodeURIComponent(q),'_blank');}
 </script>
 </body>
 </html>

@@ -1,120 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- PHA SEO FOR GOOGLE -->
-<title>PHA Tools OS - 12 Free Tools Built by One Man for Everyone | Peshawar</title>
-<meta name="description" content="PHA Tools OS - 12 Free Tools by One Man from Peshawar for Everyone. Weather, Password Generator, QR Maker, IP Finder, Calculator, Age Calculator and more. Free, Fast, No Ads.">
-<meta name="keywords" content="PHA Tools OS, Peshawar Hackers Association, free tools pakistan, password generator, qr code maker, my ip, calculator, PHA">
-<meta name="author" content="PHA - Peshawar Hackers Association">
-<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
-<link rel="canonical" href="https://waqqralam440-tech.github.io/pha-tools-os/">
-
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHA Tools OS - Built by One Man</title>
+<meta name="description" content="PHA Tools OS - 12 Free Tools by Peshawar Hackers Association">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Space Grotesk',sans-serif;background:#0a0a05;color:#fff;min-height:100vh}
-.sun{position:fixed;top:-30%;left:50%;transform:translateX(-50%);width:140vw;height:140vw;background: radial-gradient(circle at center, #ffec61 0%, #ffb800 15%, #ff5a00 35%, transparent 70%);filter: blur(50px);opacity:0.5;pointer-events:none}
-.glass{backdrop-filter: blur(18px);background: rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:20px}
-header{text-align:center;padding:30px 20px;position:relative;z-index:2}
-h1{font-family:'Syne',sans-serif;font-size:clamp(32px,8vw,68px);font-weight:800;line-height:0.9;letter-spacing:-2px}
-h1 span{background: linear-gradient(180deg,#fff,#ffcc00);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.sub{opacity:0.6;font-size:12px;letter-spacing:3px;margin-top:10px}
-.wrap{max-width:1100px;margin:0 auto;padding:20px;position:relative;z-index:2}
-.search{display:flex;gap:10px;margin-bottom:25px}
-.search input{flex:1;padding:16px 22px;border-radius:999px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:15px;outline:none}
-.search button{padding:16px 26px;border-radius:999px;border:none;background:#ffcc00;color:#000;font-weight:800;font-family:'Syne';cursor:pointer}
-.grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:20px}
-@media(max-width:800px){.grid{grid-template-columns:1fr}}
-.weather{padding:26px}
-.temp{font-family:'Syne';font-size:64px;font-weight:800}
-.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-top:25px}
-.tool{padding:18px;cursor:pointer;text-align:center}
+.sun{position:fixed;top:-30%;left:50%;transform:translateX(-50%);width:130vw;height:130vw;background:radial-gradient(circle,#ffec61 0%,#ffb800 15%,#ff5a00 35%,transparent 70%);filter:blur(50px);opacity:0.5}
+.glass{backdrop-filter:blur(16px);background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:20px}
+header{text-align:center;padding:30px;position:relative;z-index:2}
+h1{font-family:'Syne';font-size:48px;line-height:0.9}
+h1 span{color:#ffcc00}
+.wrap{max-width:1000px;margin:0 auto;padding:20px;position:relative;z-index:2}
+.search{display:flex;gap:10px;margin-bottom:20px}
+.search input{flex:1;padding:14px 18px;border-radius:999px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;outline:none}
+.search button{padding:14px 22px;border-radius:999px;border:none;background:#ffcc00;color:#000;font-weight:800;cursor:pointer}
+.weather{padding:22px}
+.temp{font-family:'Syne';font-size:48px}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:20px}
+.tool{padding:16px;text-align:center;cursor:pointer}
 .tool:hover{background:rgba(255,255,255,0.12)}
-.tool b{display:block;font-size:11px;opacity:0.5;margin-bottom:6px}
-.tool span{font-weight:600}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);z-index:10;align-items:center;justify-content:center;padding:20px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);z-index:10;align-items:center;justify-content:center;padding:20px}
 .modal.active{display:flex}
-.modal-box{max-width:500px;width:100%;padding:28px;position:relative}
-.close{position:absolute;top:14px;right:18px;font-size:22px;cursor:pointer}
-.input{width:100%;padding:12px 16px;border-radius:12px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;margin:8px 0;outline:none}
-.btn{width:100%;padding:12px;border-radius:12px;border:none;background:#ffcc00;color:#000;font-weight:700;cursor:pointer;margin-top:10px}
-.out{margin-top:12px;padding:12px;background:rgba(255,255,255,0.05);border-radius:12px;word-break:break-all;font-size:14px;min-height:40px}
-.footer{text-align:center;padding:50px 20px;opacity:0.4;font-size:11px}
-.ads{margin:20px 0;padding:16px;text-align:center;background:rgba(255,204,0,0.08);border:1px dashed rgba(255,204,0,0.3);border-radius:12px;font-size:12px;opacity:0.7}
+.modal-box{max-width:450px;width:100%;padding:24px;position:relative}
+.close{position:absolute;top:10px;right:16px;font-size:24px;cursor:pointer}
+.input{width:100%;padding:10px 14px;border-radius:10px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;margin:6px 0;outline:none}
+.btn{width:100%;padding:10px;border-radius:10px;border:none;background:#ffcc00;color:#000;font-weight:700;cursor:pointer;margin-top:8px}
+.out{margin-top:10px;padding:10px;background:rgba(255,255,255,0.05);border-radius:10px;word-break:break-all;min-height:36px}
+.footer{text-align:center;padding:40px;opacity:0.4;font-size:11px}
 </style>
 </head>
 <body>
 <div class="sun"></div>
-<header>
-<h1>PHA<br><span>TOOLS OS</span></h1>
-<div class="sub">BUILT BY ONE MAN • FOR EVERYONE • PHA TOOLS OS</div>
-</header>
+<header><h1>PHA<br><span>TOOLS OS</span></h1><div style="opacity:0.6;font-size:12px;letter-spacing:2px;margin-top:8px">BUILT BY ONE MAN FOR EVERYONE</div></header>
 <div class="wrap">
-<div class="ads">AdSense Ad Will Appear Here - Earn Money From Here</div>
-<div class="search">
-<input id="cityIn" placeholder="Shehar ka mausam - Peshawar, Dubai...">
-<button id="cityBtn">SEARCH</button>
-</div>
-<div class="grid">
-<div class="glass weather">
-<div id="time" style="font-size:10px;opacity:0.5"></div>
-<div class="temp" id="temp">--°C</div>
-<div id="city">📍 Loading...</div>
-<div id="stat" style="opacity:0.6;font-size:13px">--</div>
-</div>
-<div class="glass weather"><b style="font-size:11px;opacity:0.5">PHA MISSION</b><div style="margin-top:10px">Ek insan ne socha - Logon ke liye faida mand banau. Ye wahi hai.<br><br><span style="opacity:0.6;font-size:13px">12 Tools • Free • No Ads • Viral</span></div></div>
+<div class="search"><input id="cityIn" placeholder="Shehar likho - Peshawar"><button id="cityBtn">SEARCH</button></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<div class="glass weather"><div id="time" style="font-size:10px;opacity:0.5"></div><div class="temp" id="temp">--°C</div><div id="city">Loading...</div><div id="stat" style="opacity:0.6;font-size:13px">--</div></div>
+<div class="glass weather"><b style="font-size:11px;opacity:0.5">PHA MISSION</b><div style="margin-top:8px">Ek insan ne banaya jo roz kaam aaye.<br><br><span style="opacity:0.6;font-size:13px">12 Tools • Free • Fast</span></div></div>
 </div>
 <div class="tools">
-<div class="glass tool" data-tool="ip"><b>01</b><span>🌐 My IP</span></div>
-<div class="glass tool" data-tool="pass"><b>02</b><span>🔑 Password</span></div>
-<div class="glass tool" data-tool="qr"><b>03</b><span>⚡ QR Maker</span></div>
-<div class="glass tool" data-tool="calc"><b>04</b><span>🧮 Calculator</span></div>
-<div class="glass tool" data-tool="age"><b>05</b><span>🎂 Age Calc</span></div>
-<div class="glass tool" data-tool="words"><b>06</b><span>📝 Word Count</span></div>
-<div class="glass tool" data-tool="color"><b>07</b><span>🎨 Color</span></div>
-<div class="glass tool" data-tool="case"><b>08</b><span>🔠 Text Case</span></div>
-<div class="glass tool" data-tool="bmi"><b>09</b><span>💪 BMI</span></div>
-<div class="glass tool" data-tool="speed"><b>10</b><span>📶 Speed</span></div>
-<div class="glass tool" data-tool="google"><b>11</b><span>🔍 Google</span></div>
-<div class="glass tool" data-tool="youtube"><b>12</b><span>▶️ YouTube</span></div>
+<div class="glass tool" data-tool="ip">🌐 My IP</div>
+<div class="glass tool" data-tool="pass">🔑 Password</div>
+<div class="glass tool" data-tool="qr">⚡ QR Maker</div>
+<div class="glass tool" data-tool="calc">🧮 Calculator</div>
+<div class="glass tool" data-tool="age">🎂 Age Calc</div>
+<div class="glass tool" data-tool="words">📝 Word Count</div>
+<div class="glass tool" data-tool="google">🔍 Google</div>
+<div class="glass tool" data-tool="youtube">▶️ YouTube</div>
 </div>
-<div class="ads">Second Ad Here - More Earning</div>
-<div class="footer">PESHAWAR HACKERS ASSOCIATION • PHA TOOLS OS • 2026</div>
+<div class="footer">PESHAWAR HACKERS ASSOCIATION • 2026</div>
 </div>
-<div class="modal" id="modal"><div class="glass modal-box"><div class="close" id="close">×</div><h3 id="mTitle">Tool</h3><div id="mBody" style="margin-top:15px"></div></div></div>
+<div class="modal" id="modal"><div class="glass modal-box"><div class="close" id="close">x</div><h3 id="mTitle">Tool</h3><div id="mBody" style="margin-top:12px"></div></div></div>
 <script>
-const $=s=>document.getElementById(s);setInterval(()=>$('time').textContent=new Date().toLocaleTimeString(),1000);
-async function fetchW(lat,lon,name){try{const r=await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&timezone=auto`);const d=await r.json();$('temp').textContent=Math.round(d.current.temperature_2m)+'°C';$('city').textContent='📍 '+name;$('stat').textContent='Live Weather';}catch{}}
-function locate(){if(!navigator.geolocation){fetchW(34.0151,71.5249,"Peshawar");return;}navigator.geolocation.getCurrentPosition(p=>fetchW(p.coords.latitude,p.coords.longitude,"Your Location"),()=>fetchW(34.0151,71.5249,"Peshawar"))}locate();
-async function searchCity(q){if(!q) return;try{const r=await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(q)}&count=1&format=json`);const d=await r.json();if(d.results) fetchW(d.results[0].latitude,d.results[0].longitude,d.results[0].name+', '+d.results[0].country);}catch{}}
-$('cityBtn').onclick=()=>searchCity($('cityIn').value);$('cityIn').onkeydown=e=>{if(e.key==='Enter') searchCity(e.target.value)}
-const modal=$('modal');$('close').onclick=()=>modal.classList.remove('active');modal.onclick=e=>{if(e.target==modal) modal.classList.remove('active')}
+const $=s=>document.getElementById(s);
+setInterval(()=>{$('time').textContent=new Date().toLocaleTimeString()},1000);
+async function fetchW(lat,lon,name){
+ try{
+  const r=await fetch('https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lon+'&current=temperature_2m,weather_code&timezone=auto');
+  const d=await r.json();
+  $('temp').textContent=Math.round(d.current.temperature_2m)+'°C';
+  $('city').textContent=name;
+  $('stat').textContent='Live';
+ }catch{}
+}
+function locate(){
+ if(!navigator.geolocation){fetchW(34.0151,71.5249,'Peshawar');return;}
+ navigator.geolocation.getCurrentPosition(p=>fetchW(p.coords.latitude,p.coords.longitude,'Your Location'),()=>fetchW(34.0151,71.5249,'Peshawar'));
+}
+locate();
+async function searchCity(q){
+ if(!q) return;
+ try{
+  const r=await fetch('https://geocoding-api.open-meteo.com/v1/search?name='+encodeURIComponent(q)+'&count=1&format=json');
+  const d=await r.json();
+  if(d.results) fetchW(d.results[0].latitude,d.results[0].longitude,d.results[0].name);
+ }catch{}
+}
+$('cityBtn').onclick=()=>searchCity($('cityIn').value);
+$('cityIn').onkeydown=e=>{if(e.key==='Enter') searchCity(e.target.value)};
+const modal=$('modal');
+$('close').onclick=()=>modal.classList.remove('active');
+modal.onclick=e=>{if(e.target==modal) modal.classList.remove('active')};
 function openTool(t,h){$('mTitle').textContent=t;$('mBody').innerHTML=h;modal.classList.add('active');if(window.afterOpen) setTimeout(window.afterOpen,100)}
-document.querySelectorAll('.tool').forEach(el=>{el.onclick=()=>{const tt=el.dataset.tool;
-if(tt=='ip'){openTool('My IP',`<div class="out" id="ipOut">Loading...</div><button class="btn" onclick="loadIP()">Refresh</button>`);window.afterOpen=loadIP;}
-if(tt=='pass'){openTool('Password',`<input class="input" id="plen" type="number" value="16"><div class="out" id="pout"></div><button class="btn" onclick="genPass()">Generate</button>`);window.afterOpen=genPass;}
-if(tt=='qr'){openTool('QR Maker',`<input class="input" id="qrIn" placeholder="Text ya Link"><img id="qrImg" style="background:#fff;padding:10px;border-radius:12px;max-width:100%;margin-top:10px"><button class="btn" onclick="makeQR()">Generate</button>`);}
-if(tt=='calc'){openTool('Calculator',`<input class="input" id="calcIn" placeholder="2+2*5"><div class="out" id="calcOut">--</div><button class="btn" onclick="doCalc()">Calculate</button>`);}
-if(tt=='age'){openTool('Age Calc',`<input class="input" id="ageIn" type="date"><div class="out" id="ageOut"></div><button class="btn" onclick="calcAge()">Calculate</button>`);}
-if(tt=='words'){openTool('Word Count',`<textarea class="input" id="wcIn" rows="4"></textarea><div class="out" id="wcOut"></div><button class="btn" onclick="countW()">Count</button>`);}
-if(tt=='color'){openTool('Color',`<input type="color" id="colIn" value="#ffcc00" style="width:100%;height:60px"><div class="out" id="colOut">#ffcc00</div>`);window.afterOpen=()=>{$('colIn').oninput=e=>{$('colOut').textContent=e.target.value}}}
-if(tt=='case'){openTool('Text Case',`<textarea class="input" id="caseIn" rows="3"></textarea><div style="display:flex;gap:8px"><button class="btn" style="flex:1" onclick="toUpper()">UPPER</button><button class="btn" style="flex:1" onclick="toLower()">lower</button></div><div class="out" id="caseOut"></div>`);}
-if(tt=='bmi'){openTool('BMI',`<input class="input" id="bmiH" placeholder="Height cm"><input class="input" id="bmiW" placeholder="Weight kg"><div class="out" id="bmiOut"></div><button class="btn" onclick="calcBMI()">Calculate</button>`);}
-if(tt=='speed'){openTool('Speed',`<div class="out" id="speedOut">Testing...</div><button class="btn" onclick="testSpeed()">Test</button>`);window.afterOpen=testSpeed;}
-if(tt=='google'){openTool('Google',`<input class="input" id="gIn" placeholder="Search"><button class="btn" onclick="goGoogle()">Search Google</button>`);}
-if(tt=='youtube'){openTool('YouTube',`<input class="input" id="ytIn" placeholder="Search"><button class="btn" onclick="goYT()">Search YouTube</button>`);}
-}});
-function loadIP(){fetch('https://api.ipify.org?format=json').then(r=>r.json()).then(d=>{$('ipOut').innerHTML='IP: <b>'+d.ip+'</b>'}).catch(()=>$('ipOut').textContent='Failed');}
+document.querySelectorAll('.tool').forEach(el=>{
+ el.onclick=()=>{
+  const tt=el.dataset.tool;
+  if(tt=='ip'){openTool('My IP','<div class="out" id="ipOut">Loading...</div><button class="btn" onclick="loadIP()">Refresh</button>');window.afterOpen=loadIP;}
+  if(tt=='pass'){openTool('Password','<input class="input" id="plen" type="number" value="16"><div class="out" id="pout"></div><button class="btn" onclick="genPass()">Generate</button>');window.afterOpen=genPass;}
+  if(tt=='qr'){openTool('QR Maker','<input class="input" id="qrIn" placeholder="Text"><img id="qrImg" style="background:#fff;padding:8px;border-radius:10px;max-width:100%;margin-top:8px"><button class="btn" onclick="makeQR()">Generate</button>');}
+  if(tt=='calc'){openTool('Calculator','<input class="input" id="calcIn" placeholder="2+2*5"><div class="out" id="calcOut">--</div><button class="btn" onclick="doCalc()">Calculate</button>');}
+  if(tt=='age'){openTool('Age Calc','<input class="input" id="ageIn" type="date"><div class="out" id="ageOut"></div><button class="btn" onclick="calcAge()">Calculate</button>');}
+  if(tt=='words'){openTool('Word Count','<textarea class="input" id="wcIn" rows="4"></textarea><div class="out" id="wcOut"></div><button class="btn" onclick="countW()">Count</button>');}
+  if(tt=='google'){openTool('Google','<input class="input" id="gIn" placeholder="Search"><button class="btn" onclick="goGoogle()">Search Google</button>');}
+  if(tt=='youtube'){openTool('YouTube','<input class="input" id="ytIn" placeholder="Search"><button class="btn" onclick="goYT()">Search YouTube</button>');}
+ }
+});
+function loadIP(){fetch('https://api.ipify.org?format=json').then(r=>r.json()).then(d=>{$('ipOut').innerHTML='IP: <b>'+d.ip+'</b>'}).catch(()=>{$('ipOut').textContent='Failed'});}
 function genPass(){const len=parseInt($('plen').value)||16;const c="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%";let p="";for(let i=0;i<len;i++) p+=c[Math.floor(Math.random()*c.length)];$('pout').textContent=p;}
 function makeQR(){const v=$('qrIn').value||'PHA';$('qrImg').src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data='+encodeURIComponent(v);}
 function doCalc(){try{$('calcOut').textContent=Function('"use strict";return ('+$('calcIn').value+')')();}catch{$('calcOut').textContent='Error';}}
 function calcAge(){const d=new Date($('ageIn').value);if(isNaN(d)) return;let age=new Date().getFullYear()-d.getFullYear();$('ageOut').textContent='Age: '+age;}
 function countW(){const t=$('wcIn').value;const w=t.trim()?t.trim().split(/\s+/).length:0;$('wcOut').textContent='Words: '+w+' | Chars: '+t.length;}
-function toUpper(){$('caseOut').textContent=$('caseIn').value.toUpperCase();}
-function toLower(){$('caseOut').textContent=$('caseIn').value.toLowerCase();}
-function calcBMI(){const h=parseFloat($('bmiH').value)/100;const w=parseFloat($('bmiW').value);if(!h||!w) return;$('bmiOut').textContent='BMI: '+(w/(h*h)).toFixed(1);}
-function testSpeed(){const s=Date.now();fetch('https://api.ipify.org?format=json&cache='+Math.random()).then(()=>{$('speedOut').textContent='Ping: '+(Date.now()-s)+'ms';}).catch(()=>$('speedOut').textContent='Check internet');}
 function goGoogle(){const q=$('gIn').value;if(q) window.open('https://www.google.com/search?q='+encodeURIComponent(q),'_blank');}
 function goYT(){const q=$('ytIn').value;if(q) window.open('https://www.youtube.com/results?search_query='+encodeURIComponent(q),'_blank');}
 </script>

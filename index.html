@@ -3,91 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PHA | SUN-OS v9.0 - Nawa Se Aage</title>
+<title>PHA | SUN-OS v9.1</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:'Space Grotesk',sans-serif;
-  background:#0a0a05;
-  color:#fff;
-  overflow-x:hidden;
-  min-height:100vh;
-}
-.sun-core{
-  position:fixed;
-  top:-30%; left:50%;
-  transform:translateX(-50%);
-  width:140vw; height:140vw;
-  background: radial-gradient(circle at center, #ffec61 0%, #ffb800 15%, #ff5a00 35%, transparent 70%);
-  filter: blur(40px);
-  opacity:0.6;
-  animation: breathe 6s ease-in-out infinite;
-  pointer-events:none;
-}
+body{font-family:'Space Grotesk',sans-serif;background:#0a0a05;color:#fff;min-height:100vh}
+.sun-core{position:fixed;top:-30%;left:50%;transform:translateX(-50%);width:140vw;height:140vw;background: radial-gradient(circle at center, #ffec61 0%, #ffb800 15%, #ff5a00 35%, transparent 70%);filter: blur(40px);opacity:0.6;animation: breathe 6s ease-in-out infinite;pointer-events:none}
 @keyframes breathe{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.08)}}
-.glass{
-  backdrop-filter: blur(20px);
-  background: rgba(255,255,255,0.07);
-  border:1px solid rgba(255,255,255,0.12);
-  border-radius:24px;
-}
-header{
-  position:relative; z-index:2;
-  padding:30px 20px;
-  text-align:center;
-}
-h1{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(40px,10vw,84px);
-  font-weight:800;
-  letter-spacing:-3px;
-  line-height:0.9;
-}
-h1 span{
-  background: linear-gradient(180deg,#fff 20%, #ffcc00);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-.tag{margin-top:10px; letter-spacing:6px; opacity:0.6; font-size:12px}
-.weather-os{
-  position:relative; z-index:2;
-  max-width:900px; margin:40px auto; padding:20px;
-  display:grid; grid-template-columns:1.3fr 0.7fr; gap:20px;
-}
+.glass{backdrop-filter: blur(20px);background: rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:24px}
+header{position:relative; z-index:2;padding:30px 20px;text-align:center}
+h1{font-family:'Syne',sans-serif;font-size:clamp(40px,10vw,84px);font-weight:800;letter-spacing:-3px;line-height:0.9}
+h1 span{background: linear-gradient(180deg,#fff 20%, #ffcc00);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.tag{margin-top:10px; letter-spacing:4px; opacity:0.8; font-size:13px; font-weight:600}
+.weather-os{position:relative; z-index:2;max-width:900px; margin:30px auto; padding:20px;display:grid; grid-template-columns:1.3fr 0.7fr; gap:20px}
 @media(max-width:700px){.weather-os{grid-template-columns:1fr}}
-.main-weather{
-  padding:32px;
-  position:relative; overflow:hidden;
-}
-.main-weather::before{
-  content:'';
-  position:absolute; inset:-1px;
-  background: linear-gradient(120deg, rgba(255,236,97,0.3), transparent 60%);
-  pointer-events:none;
-}
-.temp{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(80px,18vw,140px);
-  font-weight:800; line-height:0.9;
-}
+.main-weather{padding:32px;position:relative; overflow:hidden}
+.temp{font-family:'Syne',sans-serif;font-size:clamp(80px,18vw,140px);font-weight:800; line-height:0.9}
 .temp small{font-size:0.4em; font-weight:300; opacity:0.7}
-.city{font-size:22px; margin-top:10px; display:flex; gap:10px; align-items:center}
+.city{font-size:22px; margin-top:10px}
 .status{opacity:0.7; margin-top:6px}
 .side-cards{display:grid; gap:20px}
 .mini{padding:22px}
 .mini b{display:block; font-size:11px; letter-spacing:2px; opacity:0.5; margin-bottom:8px}
 .mini span{font-size:20px; font-weight:600}
-.search-box{
-  max-width:900px; margin:0 auto; padding:0 20px;
-  position:relative; z-index:2;
-}
-.search-box input{
-  width:100%; padding:18px 22px; border-radius:999px;
-  background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15);
-  color:#fff; font-size:16px; outline:none;
-}
-.search-box input::placeholder{color:rgba(255,255,255,0.4)}
+.search-box{max-width:900px; margin:0 auto; padding:0 20px;position:relative; z-index:2;display:flex; gap:10px}
+.search-box input{flex:1; padding:18px 22px; border-radius:999px;background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15);color:#fff; font-size:16px; outline:none}
+.search-box button{padding:18px 28px; border-radius:999px; border:none; background:#ffcc00; color:#000; font-weight:800; font-family:'Syne'; cursor:pointer}
+.search-box button:active{transform:scale(0.95)}
 .footer{text-align:center; padding:60px 20px; opacity:0.4; font-size:12px; letter-spacing:2px; position:relative; z-index:2}
 .live-dot{display:inline-block; width:8px; height:8px; background:#00ff88; border-radius:50%; margin-right:8px; box-shadow:0 0 10px #00ff88; animation:pulse 1s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
@@ -97,106 +39,43 @@ h1 span{
 <div class="sun-core"></div>
 <header>
 <h1>PHA<br><span>SUN-OS</span></h1>
-<div class="tag">NAWA SE BHI AAGE SOCH</div>
+<div class="tag">BUILT BY PHA • THINKING BEYOND NASA</div>
 </header>
+
 <div class="search-box">
-<input id="searchInput" placeholder="Kisi bhi shehar ka naam likho - Peshawar, Dubai, London...">
+<input id="searchInput" placeholder="Shehar likho - Peshawar, Karachi, Dubai...">
+<button id="searchBtn">SEARCH</button>
 </div>
+
 <div class="weather-os">
 <div class="glass main-weather">
-<div style="display:flex; justify-content:space-between; align-items:start">
-<div><span class="live-dot"></span><span style="font-size:11px; letter-spacing:3px; opacity:0.7">LIVE WEATHER OS</span></div>
+<div style="display:flex; justify-content:space-between;">
+<div><span class="live-dot"></span><span style="font-size:11px; letter-spacing:3px; opacity:0.7">LIVE WEATHER</span></div>
 <div style="font-size:11px; opacity:0.5" id="timeNow">--:--</div>
 </div>
 <div class="temp" id="temp">--<small>°C</small></div>
-<div class="city" id="city">📍 Location dhund raha hun...</div>
-<div class="status" id="status">Suraj se connect ho raha hai...</div>
+<div class="city" id="city">📍 Location...</div>
+<div class="status" id="status">Connect ho raha hai...</div>
 </div>
 <div class="side-cards">
-<div class="glass mini">
-<b>WIND / HAWA</b>
-<span id="wind">-- km/h</span>
-</div>
-<div class="glass mini">
-<b>FEELS LIKE / MEHSOOS</b>
-<span id="feels">--°C</span>
-</div>
-<div class="glass mini">
-<b>GRADE / QUALITY</b>
-<span id="grade">--</span>
-</div>
-<div class="glass mini">
-<b>SURAJ OS</b>
-<span style="font-size:14px; opacity:0.8">Ye Google nahi, PHA hai. Roshni se banta hai.</span>
+<div class="glass mini"><b>WIND / HAWA</b><span id="wind">-- km/h</span></div>
+<div class="glass mini"><b>FEELS LIKE</b><span id="feels">--°C</span></div>
+<div class="glass mini"><b>GRADE</b><span id="grade">--</span></div>
+<div class="glass mini"><b>PHA OS</b><span style="font-size:14px; opacity:0.8">Nawa se aage soch!</span></div>
 </div>
 </div>
-</div>
-<div class="footer">PESHAWAR HACKERS ASSOCIATION • 2026 • BUILT BEYOND NASA</div>
+<div class="footer">PESHAWAR HACKERS ASSOCIATION • 2026</div>
+
 <script>
-const tempEl=document.getElementById('temp');
-const cityEl=document.getElementById('city');
-const statusEl=document.getElementById('status');
-const windEl=document.getElementById('wind');
-const feelsEl=document.getElementById('feels');
-const gradeEl=document.getElementById('grade');
-const timeEl=document.getElementById('timeNow');
-const searchInput=document.getElementById('searchInput');
-function updateTime(){timeEl.textContent=new Date().toLocaleTimeString();}
-setInterval(updateTime,1000); updateTime();
-function weatherGrade(code,temp){
- if(code<=1) return temp>30?"A+ DHUP WALA":"A+ Saaf";
- if(code<=3) return "B+ Halke Badal";
- if(code<=51) return "C Thoda Abr";
- if(code<=67) return "D Barish";
- if(code>=95) return "F Toofan";
- return "B Theek Hai";
-}
-function weatherText(code){
- const map={0:"Bilkul Saaf",1:"Saaf",2:"Halke Badal",3:"Badal",45:"Kohra",51:"Halki Barish",61:"Barish",71:"Baraf",95:"Toofan"};
- return map[code]||"Mausam Acha Hai";
-}
-async function fetchWeather(lat,lon,name){
- try{
-  const url=`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m&timezone=auto`;
-  const r=await fetch(url); const data=await r.json(); const c=data.current;
-  tempEl.innerHTML=`${Math.round(c.temperature_2m)}<small>°C</small>`;
-  cityEl.textContent=`📍 ${name}`;
-  statusEl.textContent=weatherText(c.weather_code);
-  windEl.textContent=`${c.wind_speed_10m} km/h`;
-  feelsEl.textContent=`${Math.round(c.apparent_temperature)}°C`;
-  gradeEl.textContent=weatherGrade(c.weather_code,c.temperature_2m);
- }catch(e){
-  statusEl.textContent="Weather load nahi hua, dobara try karo";
- }
-}
-async function locate(){
- if(!navigator.geolocation){ fetchWeather(34.0151,71.5249,"Peshawar"); return;}
- navigator.geolocation.getCurrentPosition(async pos=>{
-   const {latitude,longitude}=pos.coords;
-   let name="Aapki Location";
-   try{
-     const geo=await fetch(`https://geocoding-api.open-meteo.com/v1/reverse?latitude=${latitude}&longitude=${longitude}&language=ur`);
-     const g=await geo.json();
-     if(g.results && g.results[0]) name=g.results[0].name;
-   }catch{}
-   fetchWeather(latitude,longitude,name);
- },()=>{fetchWeather(34.0151,71.5249,"Peshawar (Default)");});
-}
-locate();
-async function searchCity(q){
- if(!q) return;
- try{
-  const r=await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(q)}&count=1&language=en&format=json`);
-  const data=await r.json();
-  if(data.results && data.results[0]){
-   const {latitude,longitude,name,country}=data.results[0];
-   fetchWeather(latitude,longitude,`${name}, ${country}`);
-  }else{ statusEl.textContent=`"${q}" nahi mila`; }
- }catch{}
-}
-searchInput.addEventListener('keydown',e=>{
- if(e.key==='Enter'){ searchCity(e.target.value); }
-});
+const tempEl=document.getElementById('temp'),cityEl=document.getElementById('city'),statusEl=document.getElementById('status'),windEl=document.getElementById('wind'),feelsEl=document.getElementById('feels'),gradeEl=document.getElementById('grade'),timeEl=document.getElementById('timeNow'),searchInput=document.getElementById('searchInput'),searchBtn=document.getElementById('searchBtn');
+function updateTime(){timeEl.textContent=new Date().toLocaleTimeString();} setInterval(updateTime,1000); updateTime();
+function weatherGrade(code,temp){if(code<=1) return temp>30?"A+ DHUP WALA":"A+ Saaf"; if(code<=3) return "B+ Halke Badal"; if(code<=51) return "C Thoda Abr"; if(code<=67) return "D Barish"; if(code>=95) return "F Toofan"; return "B Theek";}
+function weatherText(code){const map={0:"Bilkul Saaf",1:"Saaf",2:"Halke Badal",3:"Badal",45:"Kohra",51:"Halki Barish",61:"Barish",71:"Baraf",95:"Toofan"}; return map[code]||"Mausam Acha";}
+async function fetchWeather(lat,lon,name){try{const r=await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m&timezone=auto`); const data=await r.json(); const c=data.current; tempEl.innerHTML=`${Math.round(c.temperature_2m)}<small>°C</small>`; cityEl.textContent=`📍 ${name}`; statusEl.textContent=weatherText(c.weather_code); windEl.textContent=`${c.wind_speed_10m} km/h`; feelsEl.textContent=`${Math.round(c.apparent_temperature)}°C`; gradeEl.textContent=weatherGrade(c.weather_code,c.temperature_2m);}catch(e){statusEl.textContent="Load nahi hua";}}
+async function locate(){if(!navigator.geolocation){fetchWeather(34.0151,71.5249,"Peshawar"); return;} navigator.geolocation.getCurrentPosition(async pos=>{const {latitude,longitude}=pos.coords; let name="Aapki Location"; try{const geo=await fetch(`https://geocoding-api.open-meteo.com/v1/reverse?latitude=${latitude}&longitude=${longitude}`); const g=await geo.json(); if(g.results && g.results[0]) name=g.results[0].name;}catch{} fetchWeather(latitude,longitude,name);},()=>{fetchWeather(34.0151,71.5249,"Peshawar");});} locate();
+async function searchCity(q){if(!q) return; statusEl.textContent="Search kar raha hun..."; try{const r=await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(q)}&count=1&language=en&format=json`); const data=await r.json(); if(data.results && data.results[0]){const {latitude,longitude,name,country}=data.results[0]; fetchWeather(latitude,longitude,`${name}, ${country}`);}else{statusEl.textContent=`"${q}" nahi mila`;}}catch{statusEl.textContent="Error";}}
+searchBtn.addEventListener('click',()=>{searchCity(searchInput.value);});
+searchInput.addEventListener('keydown',e=>{if(e.key==='Enter') searchCity(e.target.value);});
 </script>
 </body>
 </html>

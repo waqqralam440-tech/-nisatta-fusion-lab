@@ -1,102 +1,202 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>☀️ NAYA SURAJ v8.0 // DARK WEB EDITION // PHA ROOT ACCESS</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHA | SUN-OS v9.0 - Nawa Se Aage</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Share+Tech+Mono&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;color:#00ff88;font-family:'JetBrains Mono',monospace;overflow-x:hidden}
-#matrix{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:0.15}
-.container{max-width:1100px;margin:auto;padding:12px;position:relative;z-index:2}
-.header{border:1px solid #00ff88;padding:22px;background:rgba(0,0,0,0.9);box-shadow:0 0 30px #00ff8888, inset 0 0 20px #00ff8822;position:relative}
-.header::before{content:'PHA_NODE: ACTIVE // ROOT_ACCESS: GRANTED';position:absolute;top:-10px;left:20px;background:#000;padding:0 10px;font-size:10px;color:#00ff88;letter-spacing:2px}
-.glitch{font-family:'Share Tech Mono',monospace;font-size:38px;color:#fff;text-shadow:0 0 10px #00ff88,0 0 20px #facc15;animation:glitch 2s infinite}
-@keyframes glitch{0%,100%{text-shadow:0 0 10px #00ff88}20%{text-shadow:-2px 0 #ff00ff,2px 0 #00ffff}}
-.terminal{border:1px solid #333;background:#0a0a0a;padding:14px;margin:14px 0;box-shadow:0 0 15px #000}
-.terminal-head{color:#555;font-size:11px;border-bottom:1px solid #222;padding-bottom:8px;margin-bottom:10px;letter-spacing:1px}
-.card{background:rgba(10,10,10,0.95);border:1px solid #00ff8844;border-left:3px solid #00ff88;padding:16px;margin:14px 0;box-shadow:0 0 20px #000}
-.card-gold{border-left-color:gold;box-shadow:0 0 20px #facc1522}
-.card-red{border-left-color:#ff0040}
-label{display:flex;justify-content:space-between;font-size:12px;color:#888;margin-top:14px;letter-spacing:1px}
-.slider{width:100%;accent-color:#00ff88;margin:8px 0;background:#111}
-#status{font-family:'Share Tech Mono';font-size:20px;text-align:center;padding:14px;border:1px solid #00ff88;margin-top:12px;background:#001a0f;letter-spacing:2px}
-.q-green{background:#002a14;box-shadow:0 0 30px #00ff88;color:#00ff88}.q-red{background:#1a0005;color:#ff0040;border-color:#ff0040}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-.stat{background:#000;border:1px solid #222;padding:10px;text-align:center}
-.stat b{color:#00ff88;font-family:'Share Tech Mono';font-size:16px}
-.stat span{font-size:10px;color:#555;display:block}
-button{width:100%;padding:14px;border:1px solid #00ff88;background:#000;color:#00ff88;font-family:'Share Tech Mono';font-weight:bold;font-size:13px;letter-spacing:2px;margin-top:12px;cursor:pointer;transition:0.2s}
-button:hover{background:#00ff88;color:#000;box-shadow:0 0 20px #00ff88}
-.btn-gold{border-color:gold;color:gold}.btn-gold:hover{background:gold;color:#000;box-shadow:0 0 20px gold}
-canvas{width:100%;background:#000;border:1px solid #222;margin-top:12px}
-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:12px}
-th,td{border:1px solid #222;padding:8px;text-align:left}th{color:#00ff88;background:#0a0a0a}
-.blink{animation:blink 1s infinite}@keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}
-.scanline{position:fixed;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,#00ff88,transparent);animation:scan 3s linear infinite;z-index:10;opacity:0.5}
-@keyframes scan{0%{top:0}100%{top:100%}}
-</style></head><body>
-<canvas id="matrix"></canvas><div class="scanline"></div>
-<div class="container">
-<div class="header">
-<div class="glitch">PROJECT NAYA SURAJ v8.0</div>
-<div style="color:gold;letter-spacing:4px;font-size:12px;margin-top:6px">// DARK WEB EDITION // PHA ROOT</div>
-<div style="margin-top:10px;font-size:11px;color:#666">> ORIGIN: PHA, PAKISTAN [CLASSIFIED]<br>> OPERATOR: Waqar Alam [ID: 03167468272]<br>> STATUS: <span style="color:#00ff88">ROOT_ACCESS_GRANTED <span class="blink">█</span></span></div>
+body{
+  font-family:'Space Grotesk',sans-serif;
+  background:#0a0a05;
+  color:#fff;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+.sun-core{
+  position:fixed;
+  top:-30%; left:50%;
+  transform:translateX(-50%);
+  width:140vw; height:140vw;
+  background: radial-gradient(circle at center, #ffec61 0%, #ffb800 15%, #ff5a00 35%, transparent 70%);
+  filter: blur(40px);
+  opacity:0.6;
+  animation: breathe 6s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes breathe{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.08)}}
+.glass{
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:24px;
+}
+header{
+  position:relative; z-index:2;
+  padding:30px 20px;
+  text-align:center;
+}
+h1{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(40px,10vw,84px);
+  font-weight:800;
+  letter-spacing:-3px;
+  line-height:0.9;
+}
+h1 span{
+  background: linear-gradient(180deg,#fff 20%, #ffcc00);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.tag{margin-top:10px; letter-spacing:6px; opacity:0.6; font-size:12px}
+.weather-os{
+  position:relative; z-index:2;
+  max-width:900px; margin:40px auto; padding:20px;
+  display:grid; grid-template-columns:1.3fr 0.7fr; gap:20px;
+}
+@media(max-width:700px){.weather-os{grid-template-columns:1fr}}
+.main-weather{
+  padding:32px;
+  position:relative; overflow:hidden;
+}
+.main-weather::before{
+  content:'';
+  position:absolute; inset:-1px;
+  background: linear-gradient(120deg, rgba(255,236,97,0.3), transparent 60%);
+  pointer-events:none;
+}
+.temp{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(80px,18vw,140px);
+  font-weight:800; line-height:0.9;
+}
+.temp small{font-size:0.4em; font-weight:300; opacity:0.7}
+.city{font-size:22px; margin-top:10px; display:flex; gap:10px; align-items:center}
+.status{opacity:0.7; margin-top:6px}
+.side-cards{display:grid; gap:20px}
+.mini{padding:22px}
+.mini b{display:block; font-size:11px; letter-spacing:2px; opacity:0.5; margin-bottom:8px}
+.mini span{font-size:20px; font-weight:600}
+.search-box{
+  max-width:900px; margin:0 auto; padding:0 20px;
+  position:relative; z-index:2;
+}
+.search-box input{
+  width:100%; padding:18px 22px; border-radius:999px;
+  background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15);
+  color:#fff; font-size:16px; outline:none;
+}
+.search-box input::placeholder{color:rgba(255,255,255,0.4)}
+.footer{text-align:center; padding:60px 20px; opacity:0.4; font-size:12px; letter-spacing:2px; position:relative; z-index:2}
+.live-dot{display:inline-block; width:8px; height:8px; background:#00ff88; border-radius:50%; margin-right:8px; box-shadow:0 0 10px #00ff88; animation:pulse 1s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+</style>
+</head>
+<body>
+<div class="sun-core"></div>
+<header>
+<h1>PHA<br><span>SUN-OS</span></h1>
+<div class="tag">NAWA SE BHI AAGE SOCH</div>
+</header>
+<div class="search-box">
+<input id="searchInput" placeholder="Kisi bhi shehar ka naam likho - Peshawar, Dubai, London...">
 </div>
-
-<div class="terminal"><div class="terminal-head">root@pha:~# cat story.enc --decrypt</div>
-<p style="font-size:12px;line-height:20px;color:#aaa">> I am Waqar from PHA. No lab. No billions. Just mobile + 0 Rs + dream.<br>> ITER $25B in France. I $0 in PHA. On 17 Oct 2026, Q=5.00, 600MW achieved.<br>> If PHA can light a sun, the world can. This is not a lab. This is a leak from the future.<br>> <span style="color:gold">Born in PHA, Built for the World. // یہ پی ایچ اے سے ہے</span></p></div>
-
-<div class="card"><div class="terminal-head">> ./reactor_core --manual_override</div>
-<label>CORE_TEMP [keV]: <span id="tVal" style="color:#00ff88">10</span></label><input id="temp" type="range" min="1" max="20" value="10" class="slider">
-<label>MAG_FIELD [Tesla]: <span id="bVal" style="color:#00ff88">5</span></label><input id="mag" type="range" min="1" max="10" value="5" class="slider">
-<label>PLASMA_DENSITY [x10²⁰]: <span id="dVal" style="color:#00ff88">1.5</span></label><input id="dens" type="range" min="0.5" max="3" step="0.1" value="1.5" class="slider">
-<div id="status" class="q-red">[ STANDBY ] Q = 0.00</div>
-<div class="stats">
-<div class="stat"><span>TRIPLE_PRODUCT</span><b id="triple">0</b></div>
-<div class="stat"><span>Q_VALUE</span><b id="q">0.00</b></div>
-<div class="stat"><span>POWER_OUTPUT</span><b id="pow">0 MW</b></div>
-<div class="stat"><span>CORE_STATE</span><b id="state" style="color:#ff0040">OFFLINE</b></div>
+<div class="weather-os">
+<div class="glass main-weather">
+<div style="display:flex; justify-content:space-between; align-items:start">
+<div><span class="live-dot"></span><span style="font-size:11px; letter-spacing:3px; opacity:0.7">LIVE WEATHER OS</span></div>
+<div style="font-size:11px; opacity:0.5" id="timeNow">--:--</div>
 </div>
-<canvas id="chart" height="180"></canvas>
-<button class="btn-gold" onclick="igniteVoice()">> EXECUTE: IGNITION_SEQUENCE + VOICE_LOG + CERT_GEN</button>
-<canvas id="cert" width="800" height="520" style="display:none"></canvas>
-<img id="certImg" style="display:none;width:100%;border:1px solid #00ff88;margin-top:12px">
-<a id="download" style="display:none" download><button>⬇️ DOWNLOAD_CERT [PNG]</button></a>
-<button id="saveBtn" style="display:none" onclick="saveImage()">> SAVE_TO_GALLERY [LONG_PRESS_FALLBACK]</button>
-<button onclick="shareWhatsApp()">> SHARE_VIA_WHATSAPP_ENCRYPTED</button>
+<div class="temp" id="temp">--<small>°C</small></div>
+<div class="city" id="city">📍 Location dhund raha hun...</div>
+<div class="status" id="status">Suraj se connect ho raha hai...</div>
 </div>
-
-<div class="card card-gold"><div class="terminal-head">> diff iter_vs_pha --classified</div>
-<table><tr><th>PARAM</th><th>ITER [FR]</th><th>NAYA_SURAJ [PHA]</th></tr>
-<tr><td>COST</td><td>$25,000,000,000</td><td style="color:#00ff88">$0 [EXPLOIT]</td></tr>
-<tr><td>LOCATION</td><td>France [Public]</td><td style="color:gold">PHA [Dark Node] 🇵🇰</td></tr>
-<tr><td>Q_FACTOR</td><td>~1.0</td><td style="color:#00ff88">5.00 [BREACH]</td></tr>
-<tr><td>ACCESS</td><td>Gov Only</td><td style="color:#00ff88">Root - Everyone</td></tr>
-</table></div>
-
-<div class="card card-red"><div class="terminal-head">> cat /root/hall_of_fame --restricted</div>
-<p>> 🌟 Waqar Alam - FOUNDER [PHA_ROOT]</p>
-<p style="font-size:11px;color:#666;margin-top:8px">> Next slot: Rs.500 to 03167468272 [JazzCash/Easypaisa] - Auto-add in v8.1</p>
-<button class="btn-gold" onclick="window.open('https://wa.me/923167468272?text=Root%20Access%20Request%20Hall%20of%20Fame%20Rs500','_blank')">> REQUEST_ROOT_ACCESS Rs.500</button></div>
-
-<div class="terminal" style="text-align:center;color:#333;font-size:10px;letter-spacing:3px">PHA_DARK_NODE v8.0 // ENCRYPTED // 03167468272 // BORN_IN_PHA_BUILT_FOR_WORLD</div>
+<div class="side-cards">
+<div class="glass mini">
+<b>WIND / HAWA</b>
+<span id="wind">-- km/h</span>
 </div>
+<div class="glass mini">
+<b>FEELS LIKE / MEHSOOS</b>
+<span id="feels">--°C</span>
+</div>
+<div class="glass mini">
+<b>GRADE / QUALITY</b>
+<span id="grade">--</span>
+</div>
+<div class="glass mini">
+<b>SURAJ OS</b>
+<span style="font-size:14px; opacity:0.8">Ye Google nahi, PHA hai. Roshni se banta hai.</span>
+</div>
+</div>
+</div>
+<div class="footer">PESHAWAR HACKERS ASSOCIATION • 2026 • BUILT BEYOND NASA</div>
 <script>
-// Matrix Rain
-const m=document.getElementById('matrix'),mx=m.getContext('2d');m.width=window.innerWidth;m.height=window.innerHeight;
-const chars='01PHA☀️';const cols=Math.floor(m.width/14);const drops=Array(cols).fill(1);
-function matrix(){mx.fillStyle='rgba(0,0,0,0.05)';mx.fillRect(0,0,m.width,m.height);mx.fillStyle='#00ff88';mx.font='12px monospace';drops.forEach((y,i)=>{const t=chars[Math.floor(Math.random()*chars.length)];mx.fillText(t,i*14,y*14);if(y*14>m.height&&Math.random()>0.975)drops[i]=0;drops[i]++});}
-setInterval(matrix,50);
-// Reactor
-const temp=document.getElementById('temp'),mag=document.getElementById('mag'),dens=document.getElementById('dens');
-const tVal=document.getElementById('tVal'),bVal=document.getElementById('bVal'),dVal=document.getElementById('dVal');
-const statusEl=document.getElementById('status'),tripleEl=document.getElementById('triple'),qEl=document.getElementById('q'),powEl=document.getElementById('pow'),stateEl=document.getElementById('state');
-const chart=document.getElementById('chart'),ctx=chart.getContext('2d');
-let q=0,triple=0,power=0;
-function update(){let T=parseFloat(temp.value),B=parseFloat(mag.value),n=parseFloat(dens.value);tVal.textContent=T;bVal.textContent=B;dVal.textContent=n;triple=n*T*B*2;q=(T*B*n)/15;power=q*120;tripleEl.textContent=triple.toFixed(2);qEl.textContent=q.toFixed(2);powEl.textContent=Math.round(power)+' MW';if(q>=1){statusEl.textContent='[ IGNITED ] Q='+q.toFixed(2)+' // CORE_BREACH';statusEl.className='q-green';stateEl.textContent='IGNITED';stateEl.style.color='#00ff88';}else{statusEl.textContent='[ HEATING ] Q='+q.toFixed(2)+' // STANDBY';statusEl.className='q-red';stateEl.textContent='OFFLINE';stateEl.style.color='#ff0040';}drawChart();}
-function drawChart(){ctx.clearRect(0,0,chart.width,chart.height);ctx.fillStyle='#000';ctx.fillRect(0,0,chart.width,chart.height);ctx.strokeStyle='#222';for(let i=0;i<chart.width;i+=20){ctx.beginPath();ctx.moveTo(i,0);ctx.lineTo(i,200);ctx.stroke();}ctx.strokeStyle='#00ff88';ctx.beginPath();ctx.moveTo(0,100-Math.sin(q)*20);for(let x=0;x<chart.width;x++){ctx.lineTo(x,100-Math.sin((x/50)+q)*30);}ctx.stroke();ctx.fillStyle='#00ff88';ctx.beginPath();ctx.arc(50+q*35,100,8,0,Math.PI*2);ctx.fill();ctx.shadowColor='#00ff88';ctx.shadowBlur=15;ctx.fill();ctx.shadowBlur=0;}
-function igniteVoice(){if(q<1){alert('> ERROR: Q < 1.0 // IGNITION_DENIED');return;}let msg=new SpeechSynthesisUtterance('PHA Root Ignition. Q '+q.toFixed(2)+' Breach Achieved');speechSynthesis.speak(msg);generateCert();}
-function generateCert(){const c=document.getElementById('cert'),cx=c.getContext('2d');c.style.display='block';cx.fillStyle='#000';cx.fillRect(0,0,800,520);cx.strokeStyle='#00ff88';cx.lineWidth=2;cx.strokeRect(10,10,780,500);cx.strokeStyle='gold';cx.strokeRect(15,15,770,490);cx.fillStyle='#00ff88';cx.font='bold 14px monospace';cx.fillText('PHA_DARK_NODE // ROOT_ACCESS // v8.0 DARK WEB EDITION',30,40);cx.fillStyle='#fff';cx.font='bold 36px Share Tech Mono';cx.fillText('NAYA SURAJ v8.0',180,100);cx.fillStyle='gold';cx.font='14px JetBrains Mono';cx.fillText('// BORN IN PHA, BUILT FOR THE WORLD',220,125);cx.fillStyle='#aaa';cx.font='16px JetBrains Mono';cx.fillText('Q='+q.toFixed(2)+' // POWER:'+Math.round(power)+'MW // TRIPLE:'+triple.toFixed(1),40,200);cx.fillStyle='#00ff88';cx.font='bold 20px Share Tech Mono';cx.fillText('[ IGNITION ACHIEVED // CORE_BREACH ]',40,240);cx.fillStyle='#555';cx.font='12px monospace';cx.fillText('OPERATOR: Waqar Alam | NODE: PHA, Pakistan | ID: 03167468272',40,350);cx.fillStyle='#00ff88';cx.fillText('> This certificate is a leak from the future. PHA did it with $0.',40,380);let data=c.toDataURL('image/png');let img=document.getElementById('certImg');img.src=data;img.style.display='block';let link=document.getElementById('download');link.href=data;link.download='Naya-Suraj-DARK-v8.0-Q'+q.toFixed(2)+'.png';link.style.display='block';document.getElementById('saveBtn').style.display='block';}
-function saveImage(){let img=document.getElementById('certImg');if(img.src)window.open(img.src,'_blank');}
-function shareWhatsApp(){let t='☠️ DARK WEB EDITION LEAKED: PHA Suraj v8.0 Q='+q.toFixed(2)+' Root Access: https://waqqralam440-tech.github.io/-nisatta-fusion-lab/ 03167468272';window.open('https://wa.me/?text='+encodeURIComponent(t),'_blank');}
-temp.oninput=update;mag.oninput=update;dens.oninput=update;update();
-</script></body></html>
+const tempEl=document.getElementById('temp');
+const cityEl=document.getElementById('city');
+const statusEl=document.getElementById('status');
+const windEl=document.getElementById('wind');
+const feelsEl=document.getElementById('feels');
+const gradeEl=document.getElementById('grade');
+const timeEl=document.getElementById('timeNow');
+const searchInput=document.getElementById('searchInput');
+function updateTime(){timeEl.textContent=new Date().toLocaleTimeString();}
+setInterval(updateTime,1000); updateTime();
+function weatherGrade(code,temp){
+ if(code<=1) return temp>30?"A+ DHUP WALA":"A+ Saaf";
+ if(code<=3) return "B+ Halke Badal";
+ if(code<=51) return "C Thoda Abr";
+ if(code<=67) return "D Barish";
+ if(code>=95) return "F Toofan";
+ return "B Theek Hai";
+}
+function weatherText(code){
+ const map={0:"Bilkul Saaf",1:"Saaf",2:"Halke Badal",3:"Badal",45:"Kohra",51:"Halki Barish",61:"Barish",71:"Baraf",95:"Toofan"};
+ return map[code]||"Mausam Acha Hai";
+}
+async function fetchWeather(lat,lon,name){
+ try{
+  const url=`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m&timezone=auto`;
+  const r=await fetch(url); const data=await r.json(); const c=data.current;
+  tempEl.innerHTML=`${Math.round(c.temperature_2m)}<small>°C</small>`;
+  cityEl.textContent=`📍 ${name}`;
+  statusEl.textContent=weatherText(c.weather_code);
+  windEl.textContent=`${c.wind_speed_10m} km/h`;
+  feelsEl.textContent=`${Math.round(c.apparent_temperature)}°C`;
+  gradeEl.textContent=weatherGrade(c.weather_code,c.temperature_2m);
+ }catch(e){
+  statusEl.textContent="Weather load nahi hua, dobara try karo";
+ }
+}
+async function locate(){
+ if(!navigator.geolocation){ fetchWeather(34.0151,71.5249,"Peshawar"); return;}
+ navigator.geolocation.getCurrentPosition(async pos=>{
+   const {latitude,longitude}=pos.coords;
+   let name="Aapki Location";
+   try{
+     const geo=await fetch(`https://geocoding-api.open-meteo.com/v1/reverse?latitude=${latitude}&longitude=${longitude}&language=ur`);
+     const g=await geo.json();
+     if(g.results && g.results[0]) name=g.results[0].name;
+   }catch{}
+   fetchWeather(latitude,longitude,name);
+ },()=>{fetchWeather(34.0151,71.5249,"Peshawar (Default)");});
+}
+locate();
+async function searchCity(q){
+ if(!q) return;
+ try{
+  const r=await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(q)}&count=1&language=en&format=json`);
+  const data=await r.json();
+  if(data.results && data.results[0]){
+   const {latitude,longitude,name,country}=data.results[0];
+   fetchWeather(latitude,longitude,`${name}, ${country}`);
+  }else{ statusEl.textContent=`"${q}" nahi mila`; }
+ }catch{}
+}
+searchInput.addEventListener('keydown',e=>{
+ if(e.key==='Enter'){ searchCity(e.target.value); }
+});
+</script>
+</body>
+</html>

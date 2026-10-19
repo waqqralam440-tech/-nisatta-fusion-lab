@@ -1,74 +1,52 @@
- <?php
-// PHA HACK LAB - FOR EDUCATION ONLY
-// NEVER UPLOAD TO INTERNET!
-?>
-<!DOCTYPE html>
-<html>
-<head><title>PHA HACK LAB</title>
-<style>
-body{background:#000;color:#0f0;font-family:monospace;padding:20px}
-.box{border:1px solid #0f0;padding:15px;margin:15px 0;border-radius:10px}
-input{padding:10px;background:#111;color:#0f0;border:1px solid #0f0;width:90%}
-button{padding:10px 20px;background:#0f0;color:#000;font-weight:bold;cursor:pointer}
-.warn{color:red;border:1px solid red;padding:10px}
-</style>
-</head>
-<body>
-<h1>☠️ PHA HACK LAB - PESHAWAR ☠️</h1>
-<div class="warn">EDUCATIONAL LAB ONLY - RUN ON LOCALHOST ONLY!</div>
+{
+  "name": "PHA TOOLS OS",
+  "short_name": "PHA TOOLS",
+  "description": "Built by one man for everyone - 12 Hacker Tools",
+  "start_url": "/pha-tools-os/",
+  "display": "standalone",
+  "background_color": "#070709",
+  "theme_color": "#ffcc00",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1055/1055687.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}// PHA TOOLS OS - Service Worker
+const CACHE = "pha-v2";
+const FILES = ["/pha-tools-os/", "/pha-tools-os/index.html", "/pha-tools-os/manifest.json"];
 
-<div class="box">
-<h2>LEVEL 1: XSS (Cross Site Scripting)</h2>
-<p>Yahan kuch bhi likho - wo page pe dikhega</p>
-<form method="GET">
-<input name="xss" placeholder="<script>alert(1)</script> try karo">
-<button>SUBMIT</button>
-</form>
-<?php
-if(isset($_GET['xss'])){
- echo "<div style='margin-top:10px;padding:10px;background:#111'>Result: ".$_GET['xss']."</div>";
- // VULNERABLE: No sanitization!
- // FIX: echo htmlspecialchars($_GET['xss'])
+self.addEventListener("install", e => {
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)));
+});
+
+self.addEventListener("fetch", e => {
+  e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
+});// PHA TOOLS OS - Service Worker
+const CACHE = "pha-v2";
+const FILES = ["/pha-tools-os/", "/pha-tools-os/index.html", "/pha-tools-os/manifest.json"];
+
+self.addEventListener("install", e => {
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)));
+});
+
+self.addEventListener("fetch", e => {
+  e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
+});// PHA TOOLS OS - Service Worker
+const CACHE = "pha-v2";
+const FILES = ["/pha-tools-os/", "/pha-tools-os/index.html", "/pha-tools-os/manifest.json"];
+
+self.addEventListener("install", e => {
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)));
+});
+
+self.addEventListener("fetch", e => {
+  e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
+});<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ffcc00"> <script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js');
 }
-?>
-<p><small>HINT: &lt;script&gt;alert('HACKED')&lt;/script&gt; likho</small></p>
-</div>
-
-<div class="box">
-<h2>LEVEL 2: SQL Injection - Login Bypass</h2>
-<form method="POST">
-<input name="user" placeholder="Username"><br><br>
-<input name="pass" placeholder="Password"><br><br>
-<button name="login">LOGIN</button>
-</form>
-<?php
-if(isset($_POST['login'])){
- $u = $_POST['user'];
- $p = $_POST['pass'];
- // VULNERABLE QUERY
- $query = "SELECT * FROM users WHERE username='$u' AND password='$p'";
- echo "<div style='margin-top:10px;background:#111;padding:10px'>Query: $query</div>";
- if($u == "' OR '1'='1" || $u == "admin'--"){
-   echo "<b style='color:yellow'>✅ HACKED! Login Bypass Success!</b>";
- } else {
-   echo "Login Failed - Try: ' OR '1'='1";
- }
- // FIX: Use Prepared Statements
-}
-?>
-<p><small>HINT: Username me: ' OR '1'='1 likho</small></p>
-</div>
-
-<div class="box">
-<h2>LEVEL 3: What You Learned?</h2>
-<p>1. XSS ko rokne ke liye <b>htmlspecialchars()</b> use karo</p>
-<p>2. SQL Injection ko rokne ke liye <b>Prepared Statements</b> use karo</p>
-<p>3. Asli hacker secure code likhta hai, vulnerable nahi!</p>
-</div>
-
-<div class="box">
-<a href="?reset=1"><button>RESET LAB</button></a>
-</div>
-
-</body>
-</html>
+</script>

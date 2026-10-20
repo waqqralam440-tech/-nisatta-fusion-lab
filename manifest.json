@@ -1,0 +1,17 @@
+{
+  "name": "PHA TOOLS OS",
+  "short_name": "PHA TOOLS",
+  "description": "Built by one man for everyone - 12 Hacker Tools",
+  "start_url": "/pha-tools-os/",
+  "display": "standalone",
+  "background_color": "#070709",
+  "theme_color": "#ffcc00",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1055/1055687.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

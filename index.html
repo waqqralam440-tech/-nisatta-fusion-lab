@@ -4,64 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PHA TOOLS OS</title>
-<link rel="manifest" href="manifest.json">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap');
-body{
-  margin:0;
-  background:#050a14;
-  color:white;
-  font-family:sans-serif;
-  min-height:100vh;
-  padding:20px;
-}
-.header{text-align:center; padding:20px 0;}
-.header h1{
-  font-family:'Orbitron',monospace;
-  font-size:2.2rem;
-  letter-spacing:4px;
-  color:#7efcff;
-  text-shadow:0 0 15px #00f5ff, 0 0 30px #00f5ff;
-  margin:0;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-  max-width:420px;
-  margin:30px auto;
-}
-.card{
-  background:rgba(10,15,30,0.9);
-  border-radius:18px;
-  padding:22px 12px;
-  text-align:center;
-  border:2px solid;
-  box-shadow:0 0 15px currentColor;
-  cursor:pointer;
-}
-.card:hover{transform:scale(1.05);}
-.card h3{margin:10px 0 0; font-weight:800; text-shadow:0 0 8px currentColor;}
-.youtube{color:#ff1a1a; border-color:#ff1a1a;}
-.tiktok{color:#00f2ea; border-color:#ff0050;}
-.google{color:#fff; border-color:#7efcff;}
-.facebook{color:#2d8cff; border-color:#2d8cff;}
-.instagram{color:#ff6ec7; border-color:#ff6ec7;}
-.whatsapp{color:#25ff6a; border-color:#25ff6a;}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+body{margin:0;background:#020610;color:#fff;padding:16px;font-family:sans-serif;min-height:100vh}
+.hdr{text-align:center;padding:28px 0 8px}
+.hdr h1{font-family:'Orbitron';font-size:34px;letter-spacing:5px;margin:0;color:#7ffaff;text-shadow:0 0 12px #00e5ff,0 0 28px #00e5ff}
+.hdr p{font-family:'Orbitron';font-size:10px;letter-spacing:3px;color:#7ffaff;opacity:.75;margin-top:10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px;max-width:800px;margin-left:auto;margin-right:auto}
+.card{background:rgba(12,18,35,0.95);border-radius:20px;padding:22px 14px 18px;position:relative;border:2px solid;cursor:pointer;box-shadow:0 0 18px currentColor}
+.card h2{font-family:'Orbitron';font-size:18px;margin:10px 0 0;text-align:center;text-shadow:0 0 10px currentColor}
+.yt{color:#ff1a1a;border-color:#ff1a1a}
+.tk{color:#fff;border-color:#00f2ff;box-shadow:0 0 18px #00f2ff,0 0 18px #ff0050}
+.go{color:#fff;border-color:#aeeaff}
+.fb{color:#5aa2ff;border-color:#2d8cff}
+.ig{color:#ffb3e6;border-color:#ff6ec7}
+.wa{color:#5cff8a;border-color:#25ff6a}
 </style>
 </head>
 <body>
-<div class="header">
-  <h1>PHA TOOLS OS</h1>
-  <p style="font-family:Orbitron; font-size:0.7rem; letter-spacing:3px; color:#7efcff; opacity:0.7;">APP GRID — v2.1.0 • ONLINE • SECURE</p>
+<div class="hdr">
+<h1>PHA TOOLS OS</h1>
+<p>APP GRID — v2.1.0 • ONLINE • SECURE CONNECTION</p>
 </div>
 <div class="grid">
-  <div class="card youtube" onclick="location.href='https://youtube.com'"><h1 style="font-size:50px; margin:0;">▶️</h1><h3>YouTube</h3></div>
-  <div class="card tiktok" onclick="location.href='https://tiktok.com'"><h1 style="font-size:50px; margin:0;">♪</h1><h3>TikTok</h3></div>
-  <div class="card google" onclick="location.href='https://google.com'"><h1 style="font-size:50px; margin:0;">G</h1><h3>Google</h3></div>
-  <div class="card facebook" onclick="location.href='https://facebook.com'"><h1 style="font-size:50px; margin:0;">f</h1><h3>Facebook</h3></div>
-  <div class="card instagram" onclick="location.href='https://instagram.com'"><h1 style="font-size:50px; margin:0;">📸</h1><h3>Instagram</h3></div>
-  <div class="card whatsapp" onclick="location.href='https://whatsapp.com'"><h1 style="font-size:50px; margin:0;">✆</h1><h3>WhatsApp</h3></div>
+<div class="card yt" onclick="window.open('https://youtube.com')"><div style="text-align:center;font-size:70px">▶️</div><h2>YouTube</h2></div>
+<div class="card tk" onclick="window.open('https://tiktok.com')"><div style="text-align:center;font-size:70px">♪</div><h2>TikTok</h2></div>
+<div class="card go" onclick="window.open('https://google.com')"><div style="text-align:center;font-size:70px">G</div><h2>Google</h2></div>
+<div class="card fb" onclick="window.open('https://facebook.com')"><div style="text-align:center;font-size:70px">f</div><h2>Facebook</h2></div>
+<div class="card ig" onclick="window.open('https://instagram.com')"><div style="text-align:center;font-size:70px">📸</div><h2>Instagram</h2></div>
+<div class="card wa" onclick="window.open('https://wa.me')"><div style="text-align:center;font-size:70px">✆</div><h2>WhatsApp</h2></div>
 </div>
 </body>
 </html>

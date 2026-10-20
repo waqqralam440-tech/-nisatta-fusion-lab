@@ -6,33 +6,29 @@
 <title>PHA TOOLS OS</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
-body{margin:0;background:#020610;color:#fff;padding:16px;font-family:sans-serif;min-height:100vh}
-.hdr{text-align:center;padding:28px 0 8px}
-.hdr h1{font-family:'Orbitron';font-size:34px;letter-spacing:5px;margin:0;color:#7ffaff;text-shadow:0 0 12px #00e5ff,0 0 28px #00e5ff}
-.hdr p{font-family:'Orbitron';font-size:10px;letter-spacing:3px;color:#7ffaff;opacity:.75;margin-top:10px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px;max-width:800px;margin-left:auto;margin-right:auto}
-.card{background:rgba(12,18,35,0.95);border-radius:20px;padding:22px 14px 18px;position:relative;border:2px solid;cursor:pointer;box-shadow:0 0 18px currentColor}
-.card h2{font-family:'Orbitron';font-size:18px;margin:10px 0 0;text-align:center;text-shadow:0 0 10px currentColor}
-.yt{color:#ff1a1a;border-color:#ff1a1a}
-.tk{color:#fff;border-color:#00f2ff;box-shadow:0 0 18px #00f2ff,0 0 18px #ff0050}
-.go{color:#fff;border-color:#aeeaff}
-.fb{color:#5aa2ff;border-color:#2d8cff}
-.ig{color:#ffb3e6;border-color:#ff6ec7}
-.wa{color:#5cff8a;border-color:#25ff6a}
+body{margin:0;background:#050a14;color:#fff;padding:12px;font-family:sans-serif;min-height:100vh}
+.header-glass{background:rgba(255,255,255,0.06);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.12);border-radius:22px;padding:18px 16px;display:flex;align-items:center;justify-content:space-between;max-width:440px;margin:8px auto}
+.logo-text{font-family:'Orbitron';font-weight:700;line-height:0.95;font-size:18px}
+.search-bar{background:rgba(0,0,0,0.35);border:1.5px solid rgba(120,200,255,0.6);border-radius:16px;padding:10px 14px;display:flex;align-items:center;gap:8px;min-width:180px;box-shadow:0 0 18px rgba(0,200,255,0.4)}
+.apps-label{max-width:440px;margin:22px auto 12px;color:#7fb3c8}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:440px;margin:0 auto}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.10),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.18);border-radius:18px;padding:18px 8px 12px;text-align:center;cursor:pointer}
+.card p{margin:8px 0 0;font-size:12px}
 </style>
 </head>
 <body>
-<div class="hdr">
-<h1>PHA TOOLS OS</h1>
-<p>APP GRID — v2.1.0 • ONLINE • SECURE CONNECTION</p>
+<div class="header-glass">
+<div class="logo-text">PHA<br>TOOLS<br>OS</div>
+<div class="search-bar">🔍 Searching for "vide|</div>
 </div>
+<div class="apps-label">Apps</div>
 <div class="grid">
-<div class="card yt" onclick="window.open('https://youtube.com')"><div style="text-align:center;font-size:70px">▶️</div><h2>YouTube</h2></div>
-<div class="card tk" onclick="window.open('https://tiktok.com')"><div style="text-align:center;font-size:70px">♪</div><h2>TikTok</h2></div>
-<div class="card go" onclick="window.open('https://google.com')"><div style="text-align:center;font-size:70px">G</div><h2>Google</h2></div>
-<div class="card fb" onclick="window.open('https://facebook.com')"><div style="text-align:center;font-size:70px">f</div><h2>Facebook</h2></div>
-<div class="card ig" onclick="window.open('https://instagram.com')"><div style="text-align:center;font-size:70px">📸</div><h2>Instagram</h2></div>
-<div class="card wa" onclick="window.open('https://wa.me')"><div style="text-align:center;font-size:70px">✆</div><h2>WhatsApp</h2></div>
+<div class="card" onclick="location.href='https://youtube.com'"><div style="font-size:40px">▶️</div><p>YouTube</p></div>
+<div class="card" onclick="location.href='https://tiktok.com'"><div style="font-size:40px">♪</div><p>TikTok</p></div>
+<div class="card" onclick="location.href='https://google.com'"><div style="font-size:40px">G</div><p>Google</p></div>
+<div class="card" onclick="location.href='https://facebook.com'"><div style="font-size:40px">f</div><p>Facebook</p></div>
+<div class="card" onclick="location.href='https://instagram.com'"><div style="font-size:40px">📸</div><p>Instagram</p></div>
+<div class="card" onclick="location.href='https://wa.me'"><div style="font-size:40px">✆</div><p>WhatsApp</p></div>
 </div>
 </body>
 </html>
